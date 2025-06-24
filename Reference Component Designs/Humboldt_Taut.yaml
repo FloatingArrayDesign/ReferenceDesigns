@@ -1,0 +1,54 @@
+mooring_systems:
+  ms1:
+    keys: [MooringConfigID, heading, anchorType, lengthAdjust]
+    data:
+    - [taut-poly_1, 150, suction1, 0]
+    - [taut-poly_1, 270, suction1, 0]
+    - [taut-poly_1, 30, suction1, 0]
+mooring_line_configs:
+
+  taut-poly_1:    # mooring line configuration identifier
+    name: Taut polyester configuration 1      # descriptive name
+    span: 1342
+
+
+    sections:
+    - connectorType: shackle       # anchor connection
+    - type: chain_120mm             # ID of a mooring line section type
+      length: 80                  # [m] usntretched length of line section
+      adjustable: true            # flags that this section could be adjusted to accommodate different spacings...
+    - connectorType: h_link
+    - type: polyester_184mm              # ID of a mooring line section type
+      length: 1378.9                 # [m] length (unstretched)
+    - connectorType: h_link       # anchor connection  
+    - type: chain_120mm             # ID of a mooring line section type
+      length: 80                  # [m] usntretched length of line section
+      adjustable: true            # flags that this section could be adjusted to accommodate different spacings...
+    - connectorType: shackle       # anchor connection  
+
+
+mooring_line_types:
+  polyester_184mm:
+    d_nom: 0.184             # [m] nominal diameter
+    d_vol: 0.145            # [m] volume-equivalent diameter
+    m: 23.0                  # [kg/m] mass per unit length (linear density)
+    EA: 1.455e8                # [N] quasi-static stiffness
+    MBL: 10.4e6             # [N] minimum breaking load
+    EAd: 2.049e8             # [N] dynamic stiffness
+    EAd_Lm: 0.125             # [-] dynamic stiffness mean-load multiplier
+    cost: 451                # [$/m] cost per unit length
+    material: polyester      # [-] material composition descriptor
+  chain_120mm:
+    d_vol: 0.216             # [m] volume-equivalent diameter
+    m: 288.0                 # [kg/m] mass per unit length (linear density)
+    EA: 1.232e9              # [N] quasi-static stiffness
+    MBL: 13.6e6              # [N] minimum breaking load
+    cost: 1195               # [$/m] cost per unit length
+    material: chain       # [-] material composition descriptor
+    material details: R3 studless
+    
+anchor_types:
+
+  suction1:
+    type: Suction
+    m: 72005          # [kg] Mass (optional)
