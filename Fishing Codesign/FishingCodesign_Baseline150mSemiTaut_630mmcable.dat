@@ -35,11 +35,11 @@ ID  Attachment     X       Y       Z           Mass  Volume  CdA    Ca
 ---------------------- LINES --------------------------------------------------------
 ID    LineType      AttachA  AttachB  UnstrLen  NumSegs  LineOutputs
 (#)    (name)        (#)      (#)       (m)       (-)     (-)
-1    chain             1       2      346.583      4       p
+1    chain             1       2      346.583     30       p
 2    polyester         2       3      141.117     20       p
-3    chain             4       5      346.583      4       p
+3    chain             4       5      346.583     30       p
 4    polyester         5       6      141.117     20       p
-5    chain             7       8      346.583      4       p
+5    chain             7       8      346.583     30       p
 6    polyester         8       9      141.117     20       p
 7    cable             R1B     R2A     121.527    10      pt
 8    buoyancy          R2B     R3A     60.000     6      pt
