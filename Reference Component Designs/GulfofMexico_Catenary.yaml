@@ -1,0 +1,38 @@
+mooring_systems:
+  ms1:
+    keys: [MooringConfigID, heading, anchorType, lengthAdjust]
+    data:
+    - ['0', 60.0, '0', 0]
+    - ['0', 180.0, '0', 0]
+    - ['0', 300.0, '0', 0]
+mooring_line_configs:
+  '0':
+    name: '0'
+    span: 342.0
+    sections:
+    - type: 0
+      length: 364.5
+mooring_line_types:
+  0:
+    name: 0
+    d_vol: 0.288
+    m: 512.0
+    EA: 2191199027.2
+    w: 4367.680137745739
+    MBL: 22005905.759999998
+    EAd: 0.0
+    EAd_Lm: 0.0
+    d_nom: 0.16
+    cost: 2141.44
+    notes: made with getLineProps
+    material: chain
+    Cd: 1.2
+    CdAx: 0.2
+    Ca: 1.0
+    CaAx: 0.0
+mooring_connector_types: {}
+anchor_types:
+  '0':
+    zlug: 20
+    mass: 18152.233913470744
+    type: DEA

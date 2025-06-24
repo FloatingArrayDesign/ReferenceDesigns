@@ -1,0 +1,60 @@
+mooring_systems:
+  ms1:
+    keys: [MooringConfigID, heading, anchorType, lengthAdjust]
+    data:
+    - ['0', 60.0, '0', 0]
+    - ['0', 180.0, '0', 0]
+    - ['0', 300.0, '0', 0]
+mooring_line_configs:
+  '0':
+    name: '0'
+    span: 642
+    sections:
+    - type: 0
+      length: 497.7
+    - type: 1
+      length: 199.8
+mooring_line_types:
+  0:
+    name: 0
+    d_vol: 0.2788
+    w: 4093.0908951352612
+    m: 479.81135802469134
+    EA: 2053446578.5601218
+    BA: -1.0
+    EI: 0.0
+    Cd: 1.333
+    Ca: 1.0
+    CdAx: 0.639
+    CaAx: 0.5
+    material: chain
+    MBL: 20890967.695053495
+    EAd: 0.0
+    EAd_Lm: 0.0
+    d_nom: 0.15488888888888888
+    cost: 2005.2672790123456
+    notes: made with getLineProps
+  1:
+    name: 1
+    d_vol: 0.13262210988670545
+    w: 48.10819996264578
+    m: 19.063420754461877
+    EA: 121062548.29637647
+    BA: -1.0
+    EI: 0.0
+    Cd: 2.021
+    Ca: 1.1
+    CdAx: 0.0
+    CaAx: 0.15
+    material: polyester
+    MBL: 8647324.878312605
+    EAd: 100308968.5884262
+    EAd_Lm: 40.0
+    d_nom: 0.16755813953488374
+    cost: 376.1660749053543
+    notes: made with getLineProps
+anchor_types:
+  '0':
+    type: DEA
+    zlug: 20
+    mass: 11754
