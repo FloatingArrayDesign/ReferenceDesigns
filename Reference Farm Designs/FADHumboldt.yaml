@@ -2138,7 +2138,7 @@ dynamic_cable_configs:
       V: 1
       type: buoy_0
     - type: joint_0
-cable_types: {}
+
 cable_appendages:
   buoy_0:
     d: 1.2

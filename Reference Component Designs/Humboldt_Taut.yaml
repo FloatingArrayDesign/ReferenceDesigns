@@ -52,3 +52,47 @@ anchor_types:
   suction1:
     type: Suction
     m: 72005          # [kg] Mass (optional)
+
+dynamic_cable_configs:
+  dynamic_0:
+    cable_type: dynamic_cable_66
+    A: 300
+    rJTube: 5
+    span: 500
+    length: 1070.43
+    voltage: 66.0
+    sections:
+    - L_mid: 497.981
+      N_modules: 15.844
+      spacing: 26.95
+      V: 1
+      type: buoy_0
+    - type: joint_0
+  dynamic_1:
+    cable_type: dynamic_cable_66
+    A: 630
+    rJTube: 5
+    span: 500
+    length: 1070.43
+    voltage: 66.0
+    sections:
+    - L_mid: 497.981
+      N_modules: 28.3
+      spacing: 14.63
+      V: 1
+      type: buoy_0
+    - type: joint_0
+  dynamic_2:
+    cable_type: dynamic_cable_66
+    A: 1000
+    rJTube: 5
+    span: 500
+    length: 1070.43
+    voltage: 66.0
+    sections:
+    - L_mid: 497.981
+      N_modules: 42.05
+      spacing: 9.744
+      V: 1
+      type: buoy_0
+    - type: joint_0
