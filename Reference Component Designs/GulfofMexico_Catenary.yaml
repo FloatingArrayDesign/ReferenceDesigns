@@ -30,9 +30,51 @@ mooring_line_types:
     CdAx: 0.2
     Ca: 1.0
     CaAx: 0.0
-mooring_connector_types: {}
 anchor_types:
   '0':
     zlug: 20
     mass: 18152.233913470744
     type: DEA
+
+dynamic_cable_configs:
+  dynamic_0:
+    cable_type: dynamic_cable_66
+    A: 300
+    rJTube: 5
+    span: 120
+    length: 170.215
+    voltage: 66.0
+    sections:
+    - L_mid: 77.101
+      N_modules: 5.2
+      spacing: 11.88
+      V: 0.57
+      type: buoy
+
+  dynamic_1:
+    cable_type: dynamic_cable_66
+    A: 630
+    rJTube: 5
+    span: 120
+    length: 170.215
+    voltage: 66.0
+    sections:
+    - L_mid: 77.101
+      N_modules: 7.9
+      spacing: 7.23
+      V: 0.57
+      type: buoy
+
+  dynamic_2:
+    cable_type: dynamic_cable_66
+    A: 1000
+    rJTube: 5
+    span: 120
+    length: 170.215
+    voltage: 66.0
+    sections:
+    - L_mid: 77.101
+      N_modules: 11.89
+      spacing: 4.59
+      V: 0.57
+      type: buoy
