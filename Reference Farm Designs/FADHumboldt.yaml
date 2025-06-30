@@ -1,3 +1,19 @@
+# Floating wind array design for Humboldt Bay, California, United States
+
+# Array layout, site conditions, and component designs described with 
+# the Floating Wind Array Ontology format explained at 
+# https://github.com/IEAWindTask49/Ontology
+
+# Design overview: 67x IEA 15 MW reference turbines on 
+# UMaine VolturnUS-S semisubmersible platforms 
+# in a uniform grid with one substation at the center of the array.
+# Mooring system: taut mooring lines with a suction pile anchor.
+# Dynamic cable type: lazy wave configuration
+
+# Developed by the National Renewable Energy Laboratory (NREL)
+# Details can be found at
+# https://github.com/FloatingArrayDesign/ReferenceDesigns/tree/main 
+
 site:
   bathymetry:
     x: [0.0, 16000.0]

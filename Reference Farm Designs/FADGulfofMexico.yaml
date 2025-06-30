@@ -1,28 +1,26 @@
+# Floating wind array design for the Gulf of America, United States
+
+# Array layout, site conditions, and component designs described with 
+# the Floating Wind Array Ontology format explained at 
+# https://github.com/IEAWindTask49/Ontology
+
+# Design overview: 67x IEA 15 MW reference turbines on 
+# UMaine VolturnUS-S semisubmersible platforms
+# in a uniform grid with one substation at the center of the array.
+# Mooring system: chain catenary lines with drag-embedment anchors.
+# Dynamic cable type: lazy wave configuration
+
+# Developed by the National Renewable Energy Laboratory (NREL)
+# Details can be found at
+# https://github.com/FloatingArrayDesign/ReferenceDesigns/tree/main 
+
 site:
-  seabed:
-    x: [-100.0, 10000.0, 20000.0]
-    y: [-100.0, 10000.0, 20000.0]
-    type_array:
-    - [mud, mud, mud]
-    - [mud, mud, mud]
-    - [mud, mud, mud]
-    soil_types:
-      mud:
-        Gamma: [10.0]
-        Su0: [25.0]
-        k: [3.0]
-        alpha: [0.6]
-        phi: [0]
-        UCS: [0]
-        Em: [0]
-        gamma: [4.7]
   bathymetry:
-    x: [-100.0, 10000.0, 20000.0]
-    y: [-100.0, 10000.0, 20000.0]
+    x: [0.0, 20000.0]
+    y: [0.0, 20000.0]
     depths:
-    - [80.0, 80.0, 80.0]
-    - [80.0, 80.0, 80.0]
-    - [80.0, 80.0, 80.0]
+    - [80.0, 80.0]
+    - [80.0, 80.0]
   boundaries:
     x_y:
     - [0.0, 0.0]

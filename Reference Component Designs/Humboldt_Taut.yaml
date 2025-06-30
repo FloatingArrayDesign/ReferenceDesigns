@@ -1,3 +1,16 @@
+# Mooring and dynamic cable configuration for Humboldt Bay, CA, United States
+
+# Mooring configuration: chain-polyester-chain taut
+# Dynamic cable configuration: 66 kV lazy wave
+
+# Mooring and cable configurations described with 
+# the Floating Wind Array Ontology format explained at 
+# https://github.com/IEAWindTask49/Ontology
+
+# Developed by the National Renewable Energy Laboratory (NREL)
+# Details can be found at
+# https://github.com/FloatingArrayDesign/ReferenceDesigns/tree/main
+
 mooring_systems:
   ms1:
     keys: [MooringConfigID, heading, anchorType, lengthAdjust]
