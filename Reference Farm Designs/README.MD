@@ -26,7 +26,7 @@ depth and features 67 turbines in a uniform grid with taut mooring systems and
 lazy wave dynamic cables. Cables are routed to avoid the large mooring footprints 
 at this water depth. There is a substation at the center of the array.
 
-![deep](deep.png)
+![deep](Figures/deep.png)
 
 
 ## Intermediate-depth design
@@ -36,7 +36,7 @@ features 132 turbines for a total capacity of 1.98 GW in a square grid. The
 platforms have semi-taut mooring systems and lazy-wave dynamic cables.
 Two substations were placed in the array, each receiving nine cable strings.
 
-![intermediate](intermediate.png)
+![intermediate](Figures/intermediate.png)
 
 
 ## Shallow-water design
@@ -45,18 +45,18 @@ This design is based on Gulf of America site conditions at 80 m water depth and
 features 67 turbines in a rectangular grid with catenary mooring systems and 
 lazy wave dynamic cables. There is a substation at the center of the array.
 
-![shallow](shallow.png)
+![shallow](Figures/shallow.png)
 
 
 ## References
 
-[1] M. Biglu, M. Hall, E. Lozon, and S. Housner, “Reference Site Conditions for Floating Wind Arrays in the United States,” NREL/TP-5000-89897, 2024.
+[1] [M. Biglu, M. Hall, E. Lozon, and S. Housner, “Reference Site Conditions for Floating Wind Arrays in the United States,” NREL/TP-5000-89897, 2024.](https://docs.nrel.gov/docs/fy24osti/89897.pdf)
 
-[2] E. Gaertner et al., “Definition of the IEA 15-Megawatt Offshore Reference Wind Turbine,” NREL/TP-5000-75698, 2020.
+[2] [E. Gaertner et al., “Definition of the IEA 15-Megawatt Offshore Reference Wind Turbine,” NREL/TP-5000-75698, 2020.](https://docs.nrel.gov/docs/fy20osti/75698.pdf)
 
-[3] C. Allen et al., “Definition of the UMaine VolturnUS-S Reference Platform Developed for the IEA Wind 15-Megawatt Offshore Reference Wind Turbine,” NREL/TP-5000-76773, 2020.
+[3] [C. Allen et al., “Definition of the UMaine VolturnUS-S Reference Platform Developed for the IEA Wind 15-Megawatt Offshore Reference Wind Turbine,” NREL/TP-5000-76773, 2020.](https://docs.nrel.gov/docs/fy20osti/76773.pdf)
 
-[4] E. Lozon, M. Lekkala, L. Sirkis, and M. Hall, "Reference mooring and dynamic cable designs for representative U.S. floating wind farms", Ocean Engineering, 2025 
+[4] [E. Lozon, M. Lekkala, L. Sirkis, and M. Hall, "Reference mooring and dynamic cable designs for representative U.S. floating wind farms", Ocean Engineering, 2025](https://doi.org/10.1016/j.oceaneng.2025.120473)
 
 [5] F. Jorge Alcantara, Design of a Floating Foundation for an HVAC Off-
 shore Substation, Ph.D. thesis, Universite de Liege, Belgium.
