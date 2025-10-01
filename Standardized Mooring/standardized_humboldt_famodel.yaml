@@ -4587,10 +4587,10 @@ site:
         gamma: [4.7]
         phi: [0.0]
       mud:
-        Su0: [23.94]
+        Su0: [2.39]
         depth: [0]
         gamma: [10]
-        k: [2.67]
+        k: [1.41]
         alpha: [0.7]
         phi: [0.0]
         UCS: [7.0]
@@ -13266,7 +13266,7 @@ platform:
     shape: circ
     stations: [0, 1]
     t: 0.05
-    type: 2
+    type: rigid
     dlsMax: 5.0
     headings: 0.0
   - Ca: 1.0
@@ -13289,7 +13289,7 @@ platform:
     shape: circ
     stations: [0, 35]
     t: 0.05
-    type: 2
+    type: rigid
     dlsMax: 5.0
     headings: [60.0, 180.0, 300.0]
   - Ca: 1.0
@@ -13309,7 +13309,7 @@ platform:
     shape: rect
     stations: [0, 40.5]
     t: 0.05
-    type: 2
+    type: rigid
     dlsMax: 5.0
     headings: [60.0, 180.0, 300.0]
   - Ca: 1.0
@@ -13327,7 +13327,7 @@ platform:
     shape: circ
     stations: [0, 1]
     t: 0.01
-    type: 2
+    type: rigid
     dlsMax: 5.0
     headings: [60.0, 180.0, 300.0]
   potModMaster: 1
@@ -14354,8 +14354,8 @@ topsides:
       -0.15228099, -0.12434663, -0.09877533, -0.0752794, -0.05361604, -0.0335789,
       -0.01499149, 0.00229803, 0.01842102, 0.03349169, 0.0476098, 0.0608629, 0.07332812,
       0.0850737, 0.0961602, 0.10664158, 0.11656607, 0.12597691]
-  precone: 4.0
-  shaft_tilt: 6.0
+  precone: -4.0
+  shaft_tilt: -6.0
   torque_control:
     VS_KI: -4588245.1872
     VS_KP: -38609162.66552
@@ -14378,7 +14378,7 @@ topsides:
     t: [0.082954, 0.082954, 0.083073, 0.083073, 0.082799, 0.082799, 0.0299, 0.0299,
       0.027842, 0.027842, 0.025567, 0.025567, 0.022854, 0.022854, 0.02025, 0.02025,
       0.018339, 0.018339, 0.021211, 0.021211]
-    type: 1
+    type: rigid
   type: Turbine
   wt_ops:
     omega_op: [2.1486, 2.3397, 2.5309, 2.722, 2.9132, 3.1043, 3.2955, 3.4866, 3.6778,
@@ -14530,7 +14530,7 @@ mooring_systems:
   ms19:
     keys: [MooringConfigID, heading, anchorType, lengthAdjust]
     data:
-    - ['57', 30.0, dandg_anchor_20A, 0]
+    - ['57', 30.0, dandg_anchor_11A, 0]
     - ['58', 270.0, suction_anchor_20B, 0]
     - ['59', 150.0, suction_anchor_20C, 0]
   ms20:
@@ -14592,7 +14592,7 @@ mooring_systems:
     data:
     - ['87', 30.0, suction_anchor_30A, 0]
     - ['88', 270.0, suction_anchor_30B, 0]
-    - ['89', 150.0, suction_anchor_30C, 0]
+    - ['89', 150.0, dandg_anchor_25C, 0]
   ms30:
     keys: [MooringConfigID, heading, anchorType, lengthAdjust]
     data:
@@ -14678,31 +14678,31 @@ mooring_line_configs:
     name: '2'
     span: 1096.7
     sections:
-    - type: 0
+    - type: 2
       length: 204.204153764627
     - type: 1
       length: 1176.90424515725
-    - type: 0
+    - type: 2
       length: 152.76797259959403
   '3':
     name: '3'
     span: 1096.7
     sections:
-    - type: 2
-      length: 246.16260256632216
     - type: 3
+      length: 246.16260256632216
+    - type: 4
       length: 978.873556097925
-    - type: 2
+    - type: 3
       length: 175.6195492800829
   '4':
     name: '4'
     span: 1096.7
     sections:
-    - type: 0
+    - type: 2
       length: 221.95048556136206
     - type: 1
       length: 1101.25813492304
-    - type: 0
+    - type: 2
       length: 160.98890302195008
   '5':
     name: '5'
@@ -14718,11 +14718,11 @@ mooring_line_configs:
     name: '6'
     span: 1096.7
     sections:
-    - type: 2
-      length: 247.0940744445806
     - type: 3
+      length: 247.0940744445806
+    - type: 4
       length: 974.989297461644
-    - type: 2
+    - type: 3
       length: 176.28260412383418
   '7':
     name: '7'
@@ -14738,51 +14738,51 @@ mooring_line_configs:
     name: '8'
     span: 1096.7
     sections:
-    - type: 0
+    - type: 2
       length: 209.3349919152615
     - type: 1
       length: 1153.52483638421
-    - type: 0
+    - type: 2
       length: 154.96872493341846
   '9':
     name: '9'
     span: 1096.7
     sections:
-    - type: 4
+    - type: 2
       length: 232.19603982602263
     - type: 1
       length: 1083.79571557253
-    - type: 4
+    - type: 2
       length: 166.6204867301979
   '10':
     name: '10'
     span: 1096.7
     sections:
-    - type: 5
-      length: 249.15408888542947
     - type: 3
+      length: 249.15408888542947
+    - type: 4
       length: 960.465831279393
-    - type: 5
+    - type: 3
       length: 177.7799318063535
   '11':
     name: '11'
     span: 1096.7
     sections:
-    - type: 5
+    - type: 3
       length: 237.33727244762838
     - type: 1
       length: 1010.39905602496
-    - type: 5
+    - type: 3
       length: 169.73943685614307
   '12':
     name: '12'
     span: 1096.7
     sections:
-    - type: 0
+    - type: 2
       length: 243.3416704239673
-    - type: 3
+    - type: 4
       length: 1028.09496219839
-    - type: 0
+    - type: 2
       length: 173.66275778121866
   '13':
     name: '13'
@@ -14790,7 +14790,7 @@ mooring_line_configs:
     sections:
     - type: 5
       length: 262.21442346268645
-    - type: 3
+    - type: 4
       length: 902.148292197573
     - type: 5
       length: 188.37378912341396
@@ -14800,7 +14800,7 @@ mooring_line_configs:
     sections:
     - type: 5
       length: 251.1252199928713
-    - type: 3
+    - type: 4
       length: 950.066115411486
     - type: 5
       length: 179.25381295298578
@@ -14808,11 +14808,11 @@ mooring_line_configs:
     name: '15'
     span: 1096.7
     sections:
-    - type: 0
+    - type: 2
       length: 250.03931597446896
-    - type: 3
+    - type: 4
       length: 996.30470755621
-    - type: 0
+    - type: 2
       length: 178.4367733629855
   '16':
     name: '16'
@@ -14820,7 +14820,7 @@ mooring_line_configs:
     sections:
     - type: 5
       length: 254.14279855543697
-    - type: 3
+    - type: 4
       length: 938.550686573274
     - type: 5
       length: 181.59172286535468
@@ -14828,31 +14828,31 @@ mooring_line_configs:
     name: '17'
     span: 1096.7
     sections:
-    - type: 6
+    - type: 5
       length: 266.0864699654992
-    - type: 3
+    - type: 4
       length: 885.256188979564
-    - type: 6
+    - type: 5
       length: 191.92896891301197
   '18':
     name: '18'
     span: 1096.7
     sections:
-    - type: 7
+    - type: 2
       length: 242.94180148966598
-    - type: 3
+    - type: 4
       length: 1032.04192327598
-    - type: 7
+    - type: 2
       length: 173.39145839049314
   '19':
     name: '19'
     span: 1096.7
     sections:
-    - type: 5
-      length: 247.6668310083013
     - type: 3
+      length: 247.6668310083013
+    - type: 4
       length: 967.539039566521
-    - type: 5
+    - type: 3
       length: 176.6945972960079
   '20':
     name: '20'
@@ -14860,7 +14860,7 @@ mooring_line_configs:
     sections:
     - type: 5
       length: 258.57911633954495
-    - type: 3
+    - type: 4
       length: 918.110741596965
     - type: 5
       length: 185.2193117162868
@@ -14868,21 +14868,21 @@ mooring_line_configs:
     name: '21'
     span: 1096.7
     sections:
-    - type: 7
+    - type: 2
       length: 233.10205585700456
     - type: 1
       length: 1077.83334631294
-    - type: 7
+    - type: 2
       length: 167.1549865342945
   '22':
     name: '22'
     span: 1096.7
     sections:
-    - type: 2
+    - type: 3
       length: 237.2681173958606
     - type: 1
       length: 1014.29451497834
-    - type: 2
+    - type: 3
       length: 169.6960654450613
   '23':
     name: '23'
@@ -14890,7 +14890,7 @@ mooring_line_configs:
     sections:
     - type: 5
       length: 255.65275456305332
-    - type: 3
+    - type: 4
       length: 930.238220659911
     - type: 5
       length: 182.80020675913067
@@ -14928,11 +14928,11 @@ mooring_line_configs:
     name: '27'
     span: 1096.7
     sections:
-    - type: 2
-      length: 243.80029993906516
     - type: 3
+      length: 243.80029993906516
+    - type: 4
       length: 989.49033862943
-    - type: 2
+    - type: 3
       length: 173.97575537711916
   '28':
     name: '28'
@@ -14958,11 +14958,11 @@ mooring_line_configs:
     name: '30'
     span: 1096.7
     sections:
-    - type: 5
-      length: 253.88972500709667
     - type: 3
+      length: 253.88972500709667
+    - type: 4
       length: 943.624988133935
-    - type: 5
+    - type: 3
       length: 181.39174317374562
   '31':
     name: '31'
@@ -14970,7 +14970,7 @@ mooring_line_configs:
     sections:
     - type: 0
       length: 246.20333192196455
-    - type: 3
+    - type: 4
       length: 989.016230166059
     - type: 0
       length: 175.64836310651054
@@ -14980,7 +14980,7 @@ mooring_line_configs:
     sections:
     - type: 5
       length: 268.46489462936466
-    - type: 3
+    - type: 4
       length: 878.284660072593
     - type: 5
       length: 194.21964567308356
@@ -14988,41 +14988,41 @@ mooring_line_configs:
     name: '33'
     span: 1096.7
     sections:
-    - type: 5
-      length: 256.54837612306403
     - type: 3
+      length: 256.54837612306403
+    - type: 4
       length: 931.89741065302
-    - type: 5
+    - type: 3
       length: 183.52962086016424
   '34':
     name: '34'
     span: 1096.7
     sections:
-    - type: 2
-      length: 263.1768666217979
     - type: 3
+      length: 263.1768666217979
+    - type: 4
       length: 910.933299024233
-    - type: 2
+    - type: 3
       length: 189.23806599657075
   '35':
     name: '35'
     span: 1096.7
     sections:
-    - type: 5
-      length: 256.2518155022931
     - type: 3
+      length: 256.2518155022931
+    - type: 4
       length: 934.615601135893
-    - type: 5
+    - type: 3
       length: 183.28704112486423
   '36':
     name: '36'
     span: 1096.7
     sections:
-    - type: 5
-      length: 264.1499163839412
     - type: 3
+      length: 264.1499163839412
+    - type: 4
       length: 897.206670237192
-    - type: 5
+    - type: 3
       length: 190.12474405873542
   '37':
     name: '37'
@@ -15030,7 +15030,7 @@ mooring_line_configs:
     sections:
     - type: 0
       length: 256.2214806176219
-    - type: 3
+    - type: 4
       length: 943.616268542856
     - type: 0
       length: 183.2622869514365
@@ -15038,21 +15038,21 @@ mooring_line_configs:
     name: '38'
     span: 1096.7
     sections:
-    - type: 5
-      length: 258.09227326038234
     - type: 3
+      length: 258.09227326038234
+    - type: 4
       length: 926.181849832602
-    - type: 5
+    - type: 3
       length: 184.8096277178735
   '39':
     name: '39'
     span: 1096.7
     sections:
-    - type: 5
-      length: 265.1034499965059
     - type: 3
+      length: 265.1034499965059
+    - type: 4
       length: 893.169180125254
-    - type: 5
+    - type: 3
       length: 191.00645049248286
   '40':
     name: '40'
@@ -15060,7 +15060,7 @@ mooring_line_configs:
     sections:
     - type: 0
       length: 260.50336626158594
-    - type: 3
+    - type: 4
       length: 923.92718157032
     - type: 0
       length: 186.86776218238506
@@ -15068,21 +15068,21 @@ mooring_line_configs:
     name: '41'
     span: 1096.7
     sections:
-    - type: 2
-      length: 250.63901330989063
     - type: 3
+      length: 250.63901330989063
+    - type: 4
       length: 961.262056476816
-    - type: 2
+    - type: 3
       length: 178.88643540780296
   '42':
     name: '42'
     span: 1096.7
     sections:
-    - type: 5
-      length: 261.6711532553943
     - type: 3
+      length: 261.6711532553943
+    - type: 4
       length: 908.942315817932
-    - type: 5
+    - type: 3
       length: 187.8914294615945
   '43':
     name: '43'
@@ -15090,7 +15090,7 @@ mooring_line_configs:
     sections:
     - type: 0
       length: 257.483029982232
-    - type: 3
+    - type: 4
       length: 937.391095056004
     - type: 0
       length: 184.30105738077583
@@ -15108,11 +15108,11 @@ mooring_line_configs:
     name: '45'
     span: 1096.7
     sections:
-    - type: 5
-      length: 265.41910250273423
     - type: 3
+      length: 265.41910250273423
+    - type: 4
       length: 891.874266287425
-    - type: 5
+    - type: 3
       length: 191.30116336937576
   '46':
     name: '46'
@@ -15120,7 +15120,7 @@ mooring_line_configs:
     sections:
     - type: 0
       length: 248.21179827207857
-    - type: 3
+    - type: 4
       length: 979.646582647082
     - type: 0
       length: 177.08966956128518
@@ -15138,51 +15138,51 @@ mooring_line_configs:
     name: '48'
     span: 1096.7
     sections:
-    - type: 4
+    - type: 6
       length: 216.18240270057308
     - type: 1
       length: 1163.96274172427
-    - type: 4
+    - type: 6
       length: 158.12193116325773
   '49':
     name: '49'
     span: 1096.7
     sections:
-    - type: 2
+    - type: 3
       length: 228.27308162865694
     - type: 1
       length: 1054.82632417729
-    - type: 2
+    - type: 3
       length: 164.3770523636527
   '50':
     name: '50'
     span: 1096.7
     sections:
-    - type: 5
+    - type: 3
       length: 219.57651567076996
     - type: 1
       length: 1088.16162930472
-    - type: 5
+    - type: 3
       length: 159.78429005099252
   '51':
     name: '51'
     span: 1096.7
     sections:
-    - type: 4
+    - type: 2
       length: 231.29638775685981
     - type: 1
       length: 1087.1360370288
-    - type: 4
+    - type: 2
       length: 166.09592700425395
   '52':
     name: '52'
     span: 1096.7
     sections:
-    - type: 5
-      length: 244.79901768054557
     - type: 3
+      length: 244.79901768054557
+    - type: 4
       length: 980.612353518091
-    - type: 5
+    - type: 3
       length: 174.6641889363187
   '53':
     name: '53'
@@ -15190,7 +15190,7 @@ mooring_line_configs:
     sections:
     - type: 5
       length: 243.56292416321202
-    - type: 3
+    - type: 4
       length: 982.954457452718
     - type: 5
       length: 173.81351008096837
@@ -15198,11 +15198,11 @@ mooring_line_configs:
     name: '54'
     span: 1096.7
     sections:
-    - type: 7
+    - type: 2
       length: 239.67708907645783
     - type: 1
       length: 1046.16371930989
-    - type: 7
+    - type: 2
       length: 171.23070047005353
   '55':
     name: '55'
@@ -15210,7 +15210,7 @@ mooring_line_configs:
     sections:
     - type: 5
       length: 254.10779676543183
-    - type: 3
+    - type: 4
       length: 938.481135689535
     - type: 5
       length: 181.56402085726526
@@ -15220,7 +15220,7 @@ mooring_line_configs:
     sections:
     - type: 5
       length: 253.22978216645402
-    - type: 3
+    - type: 4
       length: 941.029714506607
     - type: 5
       length: 180.87366494826432
@@ -15228,11 +15228,11 @@ mooring_line_configs:
     name: '57'
     span: 1096.7
     sections:
-    - type: 0
+    - type: 2
       length: 247.72622798527976
-    - type: 3
+    - type: 4
       length: 1007.30719574328
-    - type: 0
+    - type: 2
       length: 176.73751108104105
   '58':
     name: '58'
@@ -15240,7 +15240,7 @@ mooring_line_configs:
     sections:
     - type: 5
       length: 258.6813639927721
-    - type: 3
+    - type: 4
       length: 918.21659231869
     - type: 5
       length: 185.3057284044316
@@ -15250,7 +15250,7 @@ mooring_line_configs:
     sections:
     - type: 5
       length: 259.6478376610357
-    - type: 3
+    - type: 4
       length: 913.105305029029
     - type: 5
       length: 186.12904594001947
@@ -15260,7 +15260,7 @@ mooring_line_configs:
     sections:
     - type: 0
       length: 256.794025049282
-    - type: 3
+    - type: 4
       length: 962.221490144078
     - type: 0
       length: 183.73135230002458
@@ -15270,7 +15270,7 @@ mooring_line_configs:
     sections:
     - type: 5
       length: 262.1208732239454
-    - type: 3
+    - type: 4
       length: 902.542984884142
     - type: 5
       length: 188.29044681309836
@@ -15280,7 +15280,7 @@ mooring_line_configs:
     sections:
     - type: 5
       length: 261.99041200665346
-    - type: 3
+    - type: 4
       length: 903.043476918948
     - type: 5
       length: 188.1744166008459
@@ -15290,7 +15290,7 @@ mooring_line_configs:
     sections:
     - type: 0
       length: 261.33810592019375
-    - type: 3
+    - type: 4
       length: 940.848791929467
     - type: 0
       length: 187.59766022167605
@@ -15298,21 +15298,21 @@ mooring_line_configs:
     name: '64'
     span: 1096.7
     sections:
-    - type: 6
+    - type: 5
       length: 268.2205184955105
-    - type: 3
+    - type: 4
       length: 874.614512485613
-    - type: 6
+    - type: 5
       length: 193.980376108461
   '65':
     name: '65'
     span: 1096.7
     sections:
-    - type: 6
+    - type: 5
       length: 265.2177891771894
-    - type: 3
+    - type: 4
       length: 888.968175752234
-    - type: 6
+    - type: 5
       length: 191.11304043839795
   '66':
     name: '66'
@@ -15320,7 +15320,7 @@ mooring_line_configs:
     sections:
     - type: 0
       length: 263.3847560412225
-    - type: 3
+    - type: 4
       length: 931.096950839555
     - type: 0
       length: 189.4264060358854
@@ -15328,21 +15328,21 @@ mooring_line_configs:
     name: '67'
     span: 1096.7
     sections:
-    - type: 6
+    - type: 5
       length: 268.8108820202641
-    - type: 3
+    - type: 4
       length: 872.050721183335
-    - type: 6
+    - type: 5
       length: 194.55996396615248
   '68':
     name: '68'
     span: 1096.7
     sections:
-    - type: 6
+    - type: 5
       length: 269.7663248213745
-    - type: 3
+    - type: 4
       length: 869.078684447526
-    - type: 6
+    - type: 5
       length: 195.50935796203643
   '69':
     name: '69'
@@ -15350,7 +15350,7 @@ mooring_line_configs:
     sections:
     - type: 0
       length: 263.2608709178103
-    - type: 3
+    - type: 4
       length: 931.492221368717
     - type: 0
       length: 189.31409946034236
@@ -15358,21 +15358,21 @@ mooring_line_configs:
     name: '70'
     span: 1096.7
     sections:
-    - type: 6
+    - type: 5
       length: 266.8022035380895
-    - type: 3
+    - type: 4
       length: 881.13320748532
-    - type: 6
+    - type: 5
       length: 192.60946477663734
   '71':
     name: '71'
     span: 1096.7
     sections:
-    - type: 6
+    - type: 5
       length: 272.476948292198
-    - type: 3
+    - type: 4
       length: 856.985336468624
-    - type: 6
+    - type: 5
       length: 198.28183687598025
   '72':
     name: '72'
@@ -15380,7 +15380,7 @@ mooring_line_configs:
     sections:
     - type: 0
       length: 261.54238909458746
-    - type: 3
+    - type: 4
       length: 940.054662157383
     - type: 0
       length: 187.77767734710008
@@ -15388,21 +15388,21 @@ mooring_line_configs:
     name: '73'
     span: 1096.7
     sections:
-    - type: 6
+    - type: 5
       length: 268.7699405325611
-    - type: 3
+    - type: 4
       length: 872.225938357573
-    - type: 6
+    - type: 5
       length: 194.51959751257334
   '74':
     name: '74'
     span: 1096.7
     sections:
-    - type: 6
+    - type: 5
       length: 272.0340165495873
-    - type: 3
+    - type: 4
       length: 858.971648189518
-    - type: 6
+    - type: 5
       length: 197.82062409900323
   '75':
     name: '75'
@@ -15410,7 +15410,7 @@ mooring_line_configs:
     sections:
     - type: 0
       length: 258.87355563970954
-    - type: 3
+    - type: 4
       length: 952.190097106111
     - type: 0
       length: 185.46851641536597
@@ -15420,7 +15420,7 @@ mooring_line_configs:
     sections:
     - type: 5
       length: 254.37402250153164
-    - type: 3
+    - type: 4
       length: 937.502133915072
     - type: 5
       length: 181.77507560327766
@@ -15428,31 +15428,31 @@ mooring_line_configs:
     name: '77'
     span: 1096.7
     sections:
-    - type: 6
+    - type: 5
       length: 271.83864292174036
-    - type: 3
+    - type: 4
       length: 859.805015079275
-    - type: 6
+    - type: 5
       length: 197.6182168861037
   '78':
     name: '78'
     span: 1096.7
     sections:
-    - type: 0
+    - type: 2
       length: 243.90488104495935
-    - type: 3
+    - type: 4
       length: 1026.08977181896
-    - type: 0
+    - type: 2
       length: 174.04740361075375
   '79':
     name: '79'
     span: 1096.7
     sections:
-    - type: 5
-      length: 242.80561270673684
     - type: 3
+      length: 242.80561270673684
+    - type: 4
       length: 989.955596553271
-    - type: 5
+    - type: 3
       length: 173.2993956893225
   '80':
     name: '80'
@@ -15460,7 +15460,7 @@ mooring_line_configs:
     sections:
     - type: 5
       length: 260.82410993726955
-    - type: 3
+    - type: 4
       length: 908.146271718808
     - type: 5
       length: 187.1471455478711
@@ -15470,7 +15470,7 @@ mooring_line_configs:
     sections:
     - type: 5
       length: 274.8738284453389
-    - type: 3
+    - type: 4
       length: 848.718879666
     - type: 5
       length: 200.8351254788358
@@ -15478,11 +15478,11 @@ mooring_line_configs:
     name: '82'
     span: 1096.7
     sections:
-    - type: 2
-      length: 268.5170791162814
     - type: 3
+      length: 268.5170791162814
+    - type: 4
       length: 886.951164266483
-    - type: 2
+    - type: 3
       length: 194.27085770236252
   '83':
     name: '83'
@@ -15490,7 +15490,7 @@ mooring_line_configs:
     sections:
     - type: 5
       length: 272.5492853248753
-    - type: 3
+    - type: 4
       length: 859.759098667253
     - type: 5
       length: 198.3574689107736
@@ -15498,21 +15498,21 @@ mooring_line_configs:
     name: '84'
     span: 1096.7
     sections:
-    - type: 6
+    - type: 5
       length: 277.4007455516505
-    - type: 3
+    - type: 4
       length: 837.267651788419
-    - type: 6
+    - type: 5
       length: 203.63625585017252
   '85':
     name: '85'
     span: 1096.7
     sections:
-    - type: 5
-      length: 273.7957733131801
     - type: 3
+      length: 273.7957733131801
+    - type: 4
       length: 862.138161964976
-    - type: 5
+    - type: 3
       length: 199.67455984248681
   '86':
     name: '86'
@@ -15520,7 +15520,7 @@ mooring_line_configs:
     sections:
     - type: 5
       length: 271.26609849008025
-    - type: 3
+    - type: 4
       length: 865.202247777687
     - type: 5
       length: 197.02866020948034
@@ -15528,21 +15528,21 @@ mooring_line_configs:
     name: '87'
     span: 1096.7
     sections:
-    - type: 6
+    - type: 5
       length: 277.94422789100327
-    - type: 3
+    - type: 4
       length: 834.286828948235
-    - type: 6
+    - type: 5
       length: 204.2539824016885
   '88':
     name: '88'
     span: 1096.7
     sections:
-    - type: 5
-      length: 274.35516555708074
     - type: 3
+      length: 274.35516555708074
+    - type: 4
       length: 859.736490912204
-    - type: 5
+    - type: 3
       length: 200.27424978748388
   '89':
     name: '89'
@@ -15550,7 +15550,7 @@ mooring_line_configs:
     sections:
     - type: 5
       length: 273.59933902503
-    - type: 3
+    - type: 4
       length: 854.675244813083
     - type: 5
       length: 199.46525033714573
@@ -15560,7 +15560,7 @@ mooring_line_configs:
     sections:
     - type: 5
       length: 274.8742527094602
-    - type: 3
+    - type: 4
       length: 848.719328316617
     - type: 5
       length: 200.8355861980109
@@ -15568,21 +15568,21 @@ mooring_line_configs:
     name: '91'
     span: 1096.7
     sections:
-    - type: 5
-      length: 275.29300139715826
     - type: 3
+      length: 275.29300139715826
+    - type: 4
       length: 855.902991736851
-    - type: 5
+    - type: 3
       length: 201.29186107464517
   '92':
     name: '92'
     span: 1096.7
     sections:
-    - type: 5
-      length: 264.61300067231247
     - type: 3
+      length: 264.61300067231247
+    - type: 4
       length: 895.891588539069
-    - type: 5
+    - type: 3
       length: 190.55134568738762
   '93':
     name: '93'
@@ -15590,7 +15590,7 @@ mooring_line_configs:
     sections:
     - type: 5
       length: 268.37240505092683
-    - type: 3
+    - type: 4
       length: 878.014178139356
     - type: 5
       length: 194.12898177976652
@@ -15598,31 +15598,31 @@ mooring_line_configs:
     name: '94'
     span: 1096.7
     sections:
-    - type: 2
-      length: 270.17743675488964
     - type: 3
+      length: 270.17743675488964
+    - type: 4
       length: 878.989779179298
-    - type: 2
+    - type: 3
       length: 195.92226079049968
   '95':
     name: '95'
     span: 1096.7
     sections:
-    - type: 2
-      length: 252.42983216579074
     - type: 3
+      length: 252.42983216579074
+    - type: 4
       length: 952.951267974369
-    - type: 2
+    - type: 3
       length: 180.25221476763582
   '96':
     name: '96'
     span: 1096.7
     sections:
-    - type: 5
-      length: 253.77538582641318
     - type: 3
+      length: 253.77538582641318
+    - type: 4
       length: 944.056790067825
-    - type: 5
+    - type: 3
       length: 181.3016305847883
   '97':
     name: '97'
@@ -15630,7 +15630,7 @@ mooring_line_configs:
     sections:
     - type: 0
       length: 260.7318324908923
-    - type: 3
+    - type: 4
       length: 923.107123632871
     - type: 0
       length: 187.06663042013338
@@ -15678,11 +15678,11 @@ mooring_line_configs:
     name: '102'
     span: 1096.7
     sections:
-    - type: 5
-      length: 261.09882095579485
     - type: 3
+      length: 261.09882095579485
+    - type: 4
       length: 911.343807731333
-    - type: 5
+    - type: 3
       length: 187.387497677157
   '103':
     name: '103'
@@ -15708,11 +15708,11 @@ mooring_line_configs:
     name: '105'
     span: 1096.7
     sections:
-    - type: 5
-      length: 262.3949478462888
     - type: 3
+      length: 262.3949478462888
+    - type: 4
       length: 905.170139240729
-    - type: 5
+    - type: 3
       length: 188.53494703669446
   '106':
     name: '106'
@@ -15740,7 +15740,7 @@ mooring_line_configs:
     sections:
     - type: 0
       length: 263.0164947839561
-    - type: 3
+    - type: 4
       length: 932.511303204498
     - type: 0
       length: 189.09317898221724
@@ -15750,7 +15750,7 @@ mooring_line_configs:
     sections:
     - type: 5
       length: 261.96983519677167
-    - type: 3
+    - type: 4
       length: 903.096444040693
     - type: 5
       length: 188.15613665192237
@@ -15758,21 +15758,21 @@ mooring_line_configs:
     name: '110'
     span: 1096.7
     sections:
-    - type: 6
+    - type: 5
       length: 274.6171486519678
-    - type: 3
+    - type: 4
       length: 847.889066708009
-    - type: 6
+    - type: 5
       length: 200.55696837744716
   '111':
     name: '111'
     span: 1096.7
     sections:
-    - type: 4
+    - type: 2
       length: 228.4194527504967
     - type: 1
       length: 1102.81553497012
-    - type: 4
+    - type: 2
       length: 164.45874443179224
   '112':
     name: '112'
@@ -15780,7 +15780,7 @@ mooring_line_configs:
     sections:
     - type: 5
       length: 261.6908815370336
-    - type: 3
+    - type: 4
       length: 904.218657158772
     - type: 5
       length: 187.9088771139955
@@ -15788,11 +15788,11 @@ mooring_line_configs:
     name: '113'
     span: 1096.7
     sections:
-    - type: 6
+    - type: 5
       length: 270.9143835335436
-    - type: 3
+    - type: 4
       length: 863.504170673729
-    - type: 6
+    - type: 5
       length: 196.66913470458374
   '114':
     name: '114'
@@ -15800,7 +15800,7 @@ mooring_line_configs:
     sections:
     - type: 0
       length: 261.0502427139089
-    - type: 3
+    - type: 4
       length: 941.972205038526
     - type: 0
       length: 187.3449234385912
@@ -15808,21 +15808,21 @@ mooring_line_configs:
     name: '115'
     span: 1096.7
     sections:
-    - type: 8
+    - type: 5
       length: 273.6670091523733
-    - type: 3
+    - type: 4
       length: 849.908204200273
-    - type: 8
+    - type: 5
       length: 199.5372813946896
   '116':
     name: '116'
     span: 1096.7
     sections:
-    - type: 6
+    - type: 5
       length: 270.5709417273718
-    - type: 3
+    - type: 4
       length: 865.646734179835
-    - type: 6
+    - type: 5
       length: 196.31998740039091
   '117':
     name: '117'
@@ -15830,7 +15830,7 @@ mooring_line_configs:
     sections:
     - type: 0
       length: 255.56323483346438
-    - type: 3
+    - type: 4
       length: 968.914143056132
     - type: 0
       length: 182.72782083341582
@@ -15838,21 +15838,21 @@ mooring_line_configs:
     name: '118'
     span: 1096.7
     sections:
-    - type: 8
+    - type: 5
       length: 271.11803031175543
-    - type: 3
+    - type: 4
       length: 861.748934241867
-    - type: 8
+    - type: 5
       length: 196.8770602544598
   '119':
     name: '119'
     span: 1096.7
     sections:
-    - type: 8
+    - type: 5
       length: 282.25835760818416
-    - type: 3
+    - type: 4
       length: 813.965673941334
-    - type: 8
+    - type: 5
       length: 209.36022347354321
 mooring_line_types:
   0:
@@ -15860,18 +15860,18 @@ mooring_line_types:
     CaAx: 0.5
     Cd: 1.333
     CdAx: 0.639
-    EA: 1959932627.6673877
+    EA: 1816139335.5416105
     EAd: 0.0
     EAd_Lm: 0.0
-    MBL: 20118488.63140024
-    cost: 1912.8566944337363
-    d_nom: 0.15132085117392116
-    d_vol: 0.2723775321130581
-    m: 457.96
+    MBL: 18905282.57593505
+    cost: 1096.9705999999996
+    d_nom: 0.14566399692442877
+    d_vol: 0.2621951944639718
+    m: 424.3599999999999
     material: chain
     name: 0
     notes: made with getLineProps
-    w: 3906.685148207106
+    w: 3620.056139167541
   1:
     Ca: 1.1
     CaAx: 0.15
@@ -15894,19 +15894,36 @@ mooring_line_types:
     CaAx: 0.5
     Cd: 1.333
     CdAx: 0.639
+    EA: 2263950943.8147383
+    EAd: 0.0
+    EAd_Lm: 0.0
+    MBL: 22583959.97375095
+    cost: 1367.465
+    d_nom: 0.16263455967290594
+    d_vol: 0.2927422074112307
+    m: 529.0
+    material: chain
+    name: 2
+    notes: made with getLineProps
+    w: 4512.7007673193275
+  3:
+    Ca: 1.0
+    CaAx: 0.5
+    Cd: 1.333
+    CdAx: 0.639
     EA: 1380561898.5481
     EAd: 0.0
     EAd_Lm: 0.0
     MBL: 15030246.927000001
-    cost: 1341.0184000000002
+    cost: 833.8693000000001
     d_nom: 0.127
     d_vol: 0.2286
     m: 322.58000000000004
     material: chain
-    name: 2
+    name: 3
     notes: made with getLineProps
     w: 2751.809099285196
-  3:
+  4:
     Ca: 1.1
     CaAx: 0.15
     Cd: 2.021
@@ -15920,936 +15937,871 @@ mooring_line_types:
     d_vol: 0.1638403053576079
     m: 29.094471000000002
     material: polyester
-    name: 3
-    notes: made with getLineProps
-    w: 73.42242752249999
-  4:
-    Ca: 1.0
-    CaAx: 0.5
-    Cd: 1.333
-    CdAx: 0.639
-    EA: 2589877951.2607546
-    EAd: 0.0
-    EAd_Lm: 0.0
-    MBL: 25085652.997496597
-    cost: 2535.8129403303697
-    d_nom: 0.17394826817189069
-    d_vol: 0.31310688270940323
-    m: 605.16
-    material: chain
     name: 4
     notes: made with getLineProps
-    w: 5162.393187809006
+    w: 73.42242752249999
   5:
     Ca: 1.0
     CaAx: 0.5
     Cd: 1.333
     CdAx: 0.639
-    EA: 1294969267.9269
+    EA: 1132000229.6125
     EAd: 0.0
     EAd_Lm: 0.0
-    MBL: 14230903.322999999
-    cost: 1256.6664
-    d_nom: 0.123
-    d_vol: 0.2214
-    m: 302.58
+    MBL: 12671638.515
+    cost: 683.7325
+    d_nom: 0.115
+    d_vol: 0.20700000000000002
+    m: 264.5
     material: chain
     name: 5
     notes: made with getLineProps
-    w: 2581.196593904503
+    w: 2256.3503836596637
   6:
     Ca: 1.0
     CaAx: 0.5
     Cd: 1.333
     CdAx: 0.639
-    EA: 1054623852.1017
+    EA: 2761057107.509865
     EAd: 0.0
     EAd_Lm: 0.0
-    MBL: 11913399.230999999
-    cost: 1020.0456
-    d_nom: 0.111
-    d_vol: 0.1998
-    m: 246.42000000000002
+    MBL: 26344136.154705472
+    cost: 1667.7386000000001
+    d_nom: 0.17960512242138307
+    d_vol: 0.32328922035848956
+    m: 645.1600000000001
     material: chain
     name: 6
     notes: made with getLineProps
-    w: 2102.1166787955176
-  7:
-    Ca: 1.0
-    CaAx: 0.5
-    Cd: 1.333
-    CdAx: 0.639
-    EA: 2109203177.98655
-    EAd: 0.0
-    EAd_Lm: 0.0
-    MBL: 21345507.295363814
-    cost: 2060.378155907895
-    d_nom: 0.15697770542341355
-    d_vol: 0.2825598697621444
-    m: 492.84000000000003
-    material: chain
-    name: 7
-    notes: made with getLineProps
-    w: 4204.233357591035
-  8:
-    Ca: 1.0
-    CaAx: 0.5
-    Cd: 1.333
-    CdAx: 0.639
-    EA: 979986255.8100998
-    EAd: 0.0
-    EAd_Lm: 0.0
-    MBL: 11170543.306999998
-    cost: 946.6503999999999
-    d_nom: 0.107
-    d_vol: 0.1926
-    m: 228.98
-    material: chain
-    name: 8
-    notes: made with getLineProps
-    w: 1953.342574103553
+    w: 5503.618198570392
 mooring_connector_types: {}
 anchor_types:
   suction_anchor_1A:
     D: 3.25
-    L: 18.940227501251265
-    t: 73.0559
-    type: suction_anchor_1A
-    zlug: 12.62681833416751
-    mass: 113745.02260313166
+    L: 18.51081903157742
+    t: 71.35
+    type: suction
+    zlug: 12.340512687718277
+    mass: 117734.91341396795
   suction_anchor_1B:
     D: 3.25
-    L: 18.892404699169408
-    t: 79.6112
-    type: suction_anchor_1B
-    zlug: 12.594936466112937
-    mass: 112911.14584564712
+    L: 18.51196768745629
+    t: 71.35
+    type: suction
+    zlug: 12.341278458304192
+    mass: 117741.97051797251
   suction_anchor_1C:
     D: 3.25
-    L: 19.455976326979975
-    t: 78.5034
-    type: suction_anchor_1C
-    zlug: 12.970650884653317
-    mass: 123000.09570315374
+    L: 19.421401755904103
+    t: 71.35
+    type: suction
+    zlug: 12.947601170602734
+    mass: 123329.65241606966
   suction_anchor_2A:
     D: 3.25
-    L: 18.753506404492978
-    t: 73.3982
-    type: suction_anchor_2A
-    zlug: 12.502337602995318
-    mass: 110512.30944340082
+    L: 18.311854617063535
+    t: 71.35
+    type: suction
+    zlug: 12.207869744709022
+    mass: 116512.51722703737
   suction_anchor_2B:
     D: 3.25
-    L: 18.913002495403404
-    t: 79.5514
-    type: suction_anchor_2B
-    zlug: 12.608668330268936
-    mass: 113269.8045876848
+    L: 18.549233445817137
+    t: 71.35
+    type: suction
+    zlug: 12.366155630544757
+    mass: 117971.23081481589
   suction_anchor_2C:
     D: 3.25
-    L: 19.296792199009214
-    t: 71.18570000000001
-    type: suction_anchor_2C
-    zlug: 12.86452813267281
-    mass: 120092.02409057085
+    L: 19.152276272382167
+    t: 71.35
+    type: suction
+    zlug: 12.768217514921446
+    mass: 121676.50833069469
   suction_anchor_3A:
     D: 3.25
-    L: 18.723873787890685
-    t: 73.4527
-    type: suction_anchor_3A
-    zlug: 12.482582525260456
-    mass: 110004.97344893905
+    L: 18.26563640074645
+    t: 71.35
+    type: suction
+    zlug: 12.177090933830964
+    mass: 116228.86926053402
   suction_anchor_3B:
     D: 3.25
-    L: 18.689503102025373
-    t: 72.09100000000001
-    type: suction_anchor_3B
-    zlug: 12.459668734683582
-    mass: 109418.46339660924
+    L: 18.173379184804165
+    t: 71.35
+    type: suction
+    zlug: 12.115552789869442
+    mass: 115661.75282883589
   suction_anchor_3C:
     D: 3.25
-    L: 19.36076616158179
-    t: 64.89590000000001
-    type: suction_anchor_3C
-    zlug: 12.907177441054525
-    mass: 121255.17072450883
+    L: 19.26230337738628
+    t: 71.35
+    type: suction
+    zlug: 12.841535584924188
+    mass: 122352.18490399123
   suction_anchor_4A:
-    D: 2.85
-    L: 15.86248566797185
-    t: 59.2892
-    type: suction_anchor_4A
-    zlug: 10.574990445314565
-    mass: 67976.07698816953
+    D: 2.65
+    L: 15.746973011309958
+    t: 59.35
+    type: suction
+    zlug: 10.49798200753997
+    mass: 67805.19022805346
   suction_anchor_4B:
     D: 3.25
-    L: 17.282773042899333
-    t: 45.5689
-    type: suction_anchor_4B
-    zlug: 11.521848695266222
-    mass: 87161.34112514733
+    L: 16.034813955323237
+    t: 71.35
+    type: suction
+    zlug: 10.689842636882156
+    mass: 102522.85063666815
   suction_anchor_4C:
     D: 3.25
-    L: 18.760826814737722
-    t: 61.7307
-    type: suction_anchor_4C
-    zlug: 12.507217876491815
-    mass: 110637.8807548894
+    L: 18.305448662639673
+    t: 71.35
+    type: suction
+    zlug: 12.203599108426447
+    mass: 116473.16036877446
   suction_anchor_5A:
     D: 3.25
-    L: 18.940227501251265
-    t: 65.15419999999999
-    type: suction_anchor_5A
-    zlug: 12.62681833416751
-    mass: 113745.02260313166
+    L: 18.61291194707981
+    t: 71.35
+    type: suction
+    zlug: 12.408574631386537
+    mass: 118362.15115860515
   suction_anchor_5B:
-    D: 2.85
-    L: 14.517645721477006
-    t: 42.1186
-    type: suction_anchor_5B
-    zlug: 9.67843048098467
-    mass: 52617.171297850604
+    D: 2.65
+    L: 13.445773404564246
+    t: 59.35
+    type: suction
+    zlug: 8.963848936376163
+    mass: 58220.37714565552
   suction_anchor_5C:
-    D: 2.85
-    L: 15.998723466926766
-    t: 45.630900000000004
-    type: suction_anchor_5C
-    zlug: 10.665815644617844
-    mass: 69680.37036917375
+    D: 3.25
+    L: 18.223480340904644
+    t: 71.35
+    type: suction
+    zlug: 12.148953560603093
+    mass: 115969.56396344339
   suction_anchor_6A:
-    D: 2.85
-    L: 16.173692196198353
-    t: 40.0454
-    type: suction_anchor_6A
-    zlug: 10.782461464132234
-    mass: 71910.59160639353
+    D: 3.25
+    L: 18.418629634935844
+    t: 71.35
+    type: suction
+    zlug: 12.279053089957227
+    mass: 117168.52083967056
   suction_anchor_6B:
-    D: 2.85
-    L: 14.621389405683203
-    t: 41.9388
-    type: suction_anchor_6B
-    zlug: 9.747592937122135
-    mass: 53710.012421054715
+    D: 2.65
+    L: 13.695790053228249
+    t: 59.35
+    type: suction
+    zlug: 9.130526702152165
+    mass: 59261.730897806076
   suction_anchor_6C:
-    D: 2.85
-    L: 15.63050992518535
-    t: 45.852900000000005
-    type: suction_anchor_6C
-    zlug: 10.420339950123566
-    mass: 65138.38805465048
+    D: 2.65
+    L: 15.429547205581853
+    t: 59.35
+    type: suction
+    zlug: 10.286446183929568
+    mass: 66483.57649867944
   suction_anchor_7A:
-    D: 2.85
-    L: 16.18356631404349
-    t: 72.404
-    type: suction_anchor_7A
-    zlug: 10.789044209362325
-    mass: 72038.00987362133
+    D: 3.25
+    L: 18.390915987347398
+    t: 71.35
+    type: suction
+    zlug: 12.260610658231599
+    mass: 116998.56111390087
   suction_anchor_7B:
-    D: 2.85
-    L: 14.652447336124999
-    t: 41.8018
-    type: suction_anchor_7B
-    zlug: 9.768298224083331
-    mass: 54040.09277322198
+    D: 2.65
+    L: 13.761017863626552
+    t: 59.35
+    type: suction
+    zlug: 9.173978575751034
+    mass: 59533.20544871266
   suction_anchor_7C:
-    D: 2.85
-    L: 15.792550288443184
-    t: 45.7366
-    type: suction_anchor_7C
-    zlug: 10.528366858962123
-    mass: 67112.08785478189
+    D: 2.65
+    L: 15.587012394351518
+    t: 59.35
+    type: suction
+    zlug: 10.391374929567679
+    mass: 67139.1404994925
   suction_anchor_8A:
-    D: 2.85
-    L: 13.609669117468616
-    t: 64.8086
-    type: suction_anchor_8A
-    zlug: 9.073112744979078
-    mass: 43677.15578928444
+    D: 2.65
+    L: 15.305670261595052
+    t: 59.35
+    type: suction
+    zlug: 10.203746841063367
+    mass: 65966.89528092279
   suction_anchor_8B:
-    D: 2.85
-    L: 14.788504303350198
-    t: 61.540400000000005
-    type: suction_anchor_8B
-    zlug: 9.85900286890013
-    mass: 55501.98769602086
+    D: 3.25
+    L: 15.973766578039546
+    t: 71.35
+    type: suction
+    zlug: 10.649144385359698
+    mass: 102147.78818444014
   suction_anchor_8C:
-    D: 2.85
-    L: 15.770740752644548
-    t: 45.6938
-    type: suction_anchor_8C
-    zlug: 10.513827168429698
-    mass: 66844.15379260048
+    D: 2.65
+    L: 15.569558726685457
+    t: 59.35
+    type: suction
+    zlug: 10.379787197998638
+    mass: 67066.74375423884
   suction_anchor_9A:
-    D: 2.85
-    L: 16.287268440431255
-    t: 72.8858
-    type: suction_anchor_9A
-    zlug: 10.858178960287503
-    mass: 73383.4167815691
+    D: 3.25
+    L: 18.594705227439462
+    t: 71.35
+    type: suction
+    zlug: 12.396436818292973
+    mass: 118250.29284102985
   suction_anchor_9B:
-    D: 2.85
-    L: 15.979879412840932
-    t: 72.432
-    type: suction_anchor_9B
-    zlug: 10.653252941893953
-    mass: 69442.9598895606
+    D: 3.25
+    L: 17.953009826324273
+    t: 71.35
+    type: suction
+    zlug: 11.968673217549515
+    mass: 114308.15628560065
   suction_anchor_9C:
-    D: 2.85
-    L: 16.158461022837365
-    t: 72.7748
-    type: suction_anchor_9C
-    zlug: 10.772307348558243
-    mass: 71714.58764408721
+    D: 3.25
+    L: 18.373646407997157
+    t: 71.35
+    type: suction
+    zlug: 12.249064271998103
+    mass: 116892.15320267362
   suction_anchor_10A:
-    D: 2.85
-    L: 16.06682110934328
-    t: 66.96100000000001
-    type: suction_anchor_10A
-    zlug: 10.711214072895519
-    mass: 70542.81269173883
+    D: 3.25
+    L: 18.372508962342145
+    t: 71.35
+    type: suction
+    zlug: 12.248305974894762
+    mass: 116885.16497196449
   suction_anchor_10B:
-    D: 2.85
-    L: 15.98829033106742
-    t: 72.4209
-    type: suction_anchor_10B
-    zlug: 10.658860220711613
-    mass: 69548.85937918062
+    D: 3.25
+    L: 17.971705279536934
+    t: 71.35
+    type: suction
+    zlug: 11.981136853024623
+    mass: 114423.01728110043
   suction_anchor_10C:
-    D: 2.85
-    L: 16.14408746262086
-    t: 72.9453
-    type: suction_anchor_10C
-    zlug: 10.762724975080573
-    mass: 71529.94644641831
+    D: 3.25
+    L: 18.305773248853846
+    t: 71.35
+    type: suction
+    zlug: 12.203815499235896
+    mass: 116475.15455930101
   dandg_anchor_11A:
-    D: 1.1535908137446513
-    L: 6.661229029344224
-    t: 32.349999999999994
-    type: dandg_anchor_11A
+    D: 1.1768969222348509
+    L: 6.854813394148907
+    t: 29.88793844469702
+    type: dandg
     zlug: 0
-    mass: 5425785.922211363
+    mass: 5425785.922000063
   suction_anchor_11B:
-    D: 2.85
-    L: 15.897464522858963
-    t: 72.80680000000001
-    type: suction_anchor_11B
-    zlug: 10.598309681905974
-    mass: 68410.97304170707
+    D: 3.25
+    L: 17.71405125876713
+    t: 71.35
+    type: suction
+    zlug: 11.809367505844754
+    mass: 112840.04429919383
   suction_anchor_11C:
-    D: 2.85
-    L: 15.721608538751385
-    t: 43.3131
-    type: suction_anchor_11C
-    zlug: 10.48107235916759
-    mass: 66243.16928952883
+    D: 2.65
+    L: 15.494528538868153
+    t: 59.35
+    type: suction
+    zlug: 10.329767072787101
+    mass: 66754.23269537285
   suction_anchor_12A:
-    D: 2.85
-    L: 15.881179633502146
-    t: 50.511599999999994
-    type: suction_anchor_12A
-    zlug: 10.58745308900143
-    mass: 68208.26986049442
+    D: 2.65
+    L: 15.834435665073597
+    t: 59.35
+    type: suction
+    zlug: 10.556290443382398
+    mass: 68169.48421869971
   dandg_anchor_12B:
-    D: 1.169046974272494
-    L: 6.788433606499891
-    t: 32.349999999999994
-    type: dandg_anchor_12B
+    D: 1.1768969222348509
+    L: 6.854813394148907
+    t: 29.88793844469702
+    type: dandg
     zlug: 0
-    mass: 5662779.126668021
+    mass: 5662779.128506055
   suction_anchor_12C:
-    D: 2.85
-    L: 15.792550288443184
-    t: 42.901799999999994
-    type: suction_anchor_12C
-    zlug: 10.528366858962123
-    mass: 67112.08785478189
+    D: 2.65
+    L: 15.704828964003672
+    t: 59.35
+    type: suction
+    zlug: 10.469852642669114
+    mass: 67629.44621374235
   suction_anchor_13A:
-    D: 2.85
-    L: 15.748538506824568
-    t: 43.2062
-    type: suction_anchor_13A
-    zlug: 10.499025671216378
-    mass: 66572.12961042805
+    D: 2.65
+    L: 15.578490788997048
+    t: 59.35
+    type: suction
+    zlug: 10.385693859331365
+    mass: 67103.64684033961
   suction_anchor_13B:
-    D: 2.85
-    L: 15.774672397770583
-    t: 45.7303
-    type: suction_anchor_13B
-    zlug: 10.516448265180388
-    mass: 66892.40356411833
+    D: 2.65
+    L: 15.470665190152774
+    t: 59.35
+    type: suction
+    zlug: 10.313858173643515
+    mass: 66654.83856359634
   dandg_anchor_13C:
-    D: 2.85
-    L: 15.770740752644548
-    t: 32.349999999999994
-    type: dandg_anchor_13C
-    zlug: 10.513827168429698
-    mass: 66844.15379260048
+    D: 2.65
+    L: 15.65739564117807
+    t: 59.35
+    type: suction
+    zlug: 10.438263760785379
+    mass: 67432.08815267932
   suction_anchor_14A:
-    D: 2.85
-    L: 15.746832309159512
-    t: 46.5567
-    type: suction_anchor_14A
-    zlug: 10.49788820610634
-    mass: 66551.25552821626
+    D: 2.65
+    L: 15.55256596855323
+    t: 59.35
+    type: suction
+    zlug: 10.368458692577153
+    mass: 66995.96657785904
   suction_anchor_14B:
-    D: 2.85
-    L: 15.745781242305025
-    t: 50.125
-    type: suction_anchor_14B
-    zlug: 10.497187494870015
-    mass: 66538.39866208407
+    D: 2.65
+    L: 15.385307899152721
+    t: 59.35
+    type: suction
+    zlug: 10.256953312976814
+    mass: 66299.31369862716
   suction_anchor_14C:
-    D: 2.85
-    L: 15.925584439407313
-    t: 45.9524
-    type: suction_anchor_14C
-    zlug: 10.617056292938209
-    mass: 68761.93116728771
+    D: 3.25
+    L: 13.754512872717914
+    t: 71.35
+    type: suction
+    zlug: 9.169756628686942
+    mass: 88514.20985964083
   suction_anchor_15A:
-    D: 2.85
-    L: 15.777891271719293
-    t: 46.4319
-    type: suction_anchor_15A
-    zlug: 10.518594181146195
-    mass: 66931.920109593
+    D: 2.65
+    L: 15.631773121966495
+    t: 59.35
+    type: suction
+    zlug: 10.421148747977663
+    mass: 67325.15857678515
   suction_anchor_15B:
-    D: 2.85
-    L: 15.775879755226901
-    t: 50.0054
-    type: suction_anchor_15B
-    zlug: 10.517253170151267
-    mass: 66907.22263719985
+    D: 2.65
+    L: 15.456922033079435
+    t: 59.35
+    type: suction
+    zlug: 10.304696068927957
+    mass: 66597.59642287814
   suction_anchor_15C:
-    D: 2.85
-    L: 16.245280399729083
-    t: 72.7552
-    type: suction_anchor_15C
-    zlug: 10.83018693315272
-    mass: 72836.6106324962
+    D: 3.25
+    L: 18.45401581187335
+    t: 71.35
+    type: suction
+    zlug: 12.302643874582232
+    mass: 117385.92618757734
   suction_anchor_16A:
-    D: 2.85
-    L: 15.740922756367652
-    t: 43.245400000000004
-    type: suction_anchor_16A
-    zlug: 10.4939485042451
-    mass: 66478.99014836994
+    D: 2.65
+    L: 15.542374573055133
+    t: 59.35
+    type: suction
+    zlug: 10.361664428911755
+    mass: 66953.51801294024
   suction_anchor_16B:
-    D: 2.85
-    L: 15.874035404852664
-    t: 49.6421
-    type: suction_anchor_16B
-    zlug: 10.582690269901775
-    mass: 68119.47200907362
+    D: 2.65
+    L: 15.689407158833053
+    t: 59.35
+    type: suction
+    zlug: 10.459571439222035
+    mass: 67565.21227266215
   suction_anchor_16C:
-    D: 2.85
-    L: 16.221398139393596
-    t: 72.86710000000001
-    type: suction_anchor_16C
-    zlug: 10.814265426262397
-    mass: 72526.80813871107
+    D: 3.25
+    L: 18.409447768279026
+    t: 71.35
+    type: suction
+    zlug: 12.272965178852683
+    mass: 117112.41654077811
   suction_anchor_17A:
-    D: 2.85
-    L: 13.773164952138083
-    t: 64.2316
-    type: suction_anchor_17A
-    zlug: 9.182109968092055
-    mass: 45205.753849334156
+    D: 2.65
+    L: 15.516038062444489
+    t: 59.35
+    type: suction
+    zlug: 10.344106755171325
+    mass: 66843.82282148198
   suction_anchor_17B:
-    D: 2.85
-    L: 14.821335344317204
-    t: 61.231899999999996
-    type: suction_anchor_17B
-    zlug: 9.880890229544802
-    mass: 55858.66679962926
+    D: 3.25
+    L: 16.079389548267905
+    t: 71.35
+    type: suction
+    zlug: 10.719559698845268
+    mass: 102796.71385476606
   suction_anchor_17C:
-    D: 2.85
-    L: 15.044135409404314
-    t: 74.5197
-    type: suction_anchor_17C
-    zlug: 10.029423606269543
-    mass: 58319.45921912631
+    D: 3.25
+    L: 16.561723573820856
+    t: 71.35
+    type: suction
+    zlug: 11.041149049213903
+    mass: 105760.38147800833
   suction_anchor_18A:
-    D: 2.85
-    L: 16.383675331626613
-    t: 71.95909999999999
-    type: suction_anchor_18A
-    zlug: 10.922450221084407
-    mass: 74649.24119187401
+    D: 3.25
+    L: 18.706039187135914
+    t: 71.35
+    type: suction
+    zlug: 12.470659458090608
+    mass: 118934.30564875399
   suction_anchor_18B:
-    D: 2.85
-    L: 14.670864078071713
-    t: 67.5476
-    type: suction_anchor_18B
-    zlug: 9.780576052047808
-    mass: 54236.45963299659
+    D: 2.65
+    L: 13.814399595840966
+    t: 59.35
+    type: suction
+    zlug: 9.209599730560644
+    mass: 59755.75596733897
   suction_anchor_18C:
-    D: 2.85
-    L: 14.77685540676793
-    t: 61.8576
-    type: suction_anchor_18C
-    zlug: 9.851236937845286
-    mass: 55375.820908907306
+    D: 2.65
+    L: 13.93505434070715
+    t: 59.35
+    type: suction
+    zlug: 9.2900362271381
+    mass: 60258.29958574424
   suction_anchor_19A:
-    D: 2.85
-    L: 16.23307704838464
-    t: 65.0308
-    type: suction_anchor_19A
-    zlug: 10.82205136558976
-    mass: 72678.19792382268
+    D: 3.25
+    L: 18.49517324076892
+    t: 71.35
+    type: suction
+    zlug: 12.330082160512612
+    mass: 117638.7889131493
   suction_anchor_19B:
-    D: 2.85
-    L: 14.596674698901749
-    t: 41.938
-    type: suction_anchor_19B
-    zlug: 9.731116465934498
-    mass: 53448.30756664561
+    D: 2.65
+    L: 13.632471385757347
+    t: 59.35
+    type: suction
+    zlug: 9.08828092383823
+    mass: 58997.791676189314
   suction_anchor_19C:
-    D: 2.85
-    L: 14.596400337798448
-    t: 45.659600000000005
-    type: suction_anchor_19C
-    zlug: 9.730933558532298
-    mass: 53445.409133109315
-  dandg_anchor_20A:
-    D: 1.1535908137446513
-    L: 6.661229029344224
-    t: 32.349999999999994
-    type: dandg_anchor_20A
-    zlug: 0
-    mass: 5425785.922211363
+    D: 2.65
+    L: 13.63081518984579
+    t: 59.35
+    type: suction
+    zlug: 9.087243459897193
+    mass: 58991.30990603426
   suction_anchor_20B:
-    D: 2.85
-    L: 14.56399895106138
-    t: 42.0388
-    type: suction_anchor_20B
-    zlug: 9.70933263404092
-    mass: 53103.61123926185
+    D: 2.65
+    L: 13.5747841853524
+    t: 59.35
+    type: suction
+    zlug: 9.049856123568265
+    mass: 58757.724803739555
   suction_anchor_20C:
-    D: 2.85
-    L: 14.513577814362426
-    t: 38.9954
-    type: suction_anchor_20C
-    zlug: 9.675718542908283
-    mass: 52574.62399880417
+    D: 2.65
+    L: 13.467219027133185
+    t: 59.35
+    type: suction
+    zlug: 8.97814601808879
+    mass: 58309.70111527396
   dandg_anchor_21A:
-    D: 2.85
-    L: 16.044119073205525
-    t: 32.349999999999994
-    type: dandg_anchor_21A
-    zlug: 10.696079382137016
-    mass: 70254.51141690022
+    D: 3.25
+    L: 13.88058473112579
+    t: 71.35
+    type: suction
+    zlug: 9.253641773875525
+    mass: 89287.26931755326
   suction_anchor_21B:
-    D: 2.85
-    L: 14.512791419981474
-    t: 39.1948
-    type: suction_anchor_21B
-    zlug: 9.675194279987648
-    mass: 52566.40152169337
+    D: 2.65
+    L: 13.462370552516758
+    t: 59.35
+    type: suction
+    zlug: 8.974832321469504
+    mass: 58288.99811153549
   suction_anchor_21C:
-    D: 2.85
-    L: 14.455384343743802
-    t: 42.000299999999996
-    type: suction_anchor_21C
-    zlug: 9.636922895829201
-    mass: 51968.46787251111
+    D: 2.65
+    L: 13.367244780101858
+    t: 59.35
+    type: suction
+    zlug: 8.911463186734572
+    mass: 57893.086359781875
   suction_anchor_22A:
-    D: 2.85
-    L: 15.925579678219153
-    t: 43.9317
-    type: suction_anchor_22A
-    zlug: 10.617053118812768
-    mass: 68761.87164277787
+    D: 2.65
+    L: 15.86514220439643
+    t: 59.35
+    type: suction
+    zlug: 10.576680089389285
+    mass: 68296.8727415506
   suction_anchor_22B:
-    D: 2.85
-    L: 14.373860986361041
-    t: 46.085800000000006
-    type: suction_anchor_22B
-    zlug: 9.58257399090736
-    mass: 51127.15095034865
+    D: 2.65
+    L: 13.309170219348788
+    t: 59.35
+    type: suction
+    zlug: 8.872698766024191
+    mass: 57650.89763851627
   suction_anchor_22C:
-    D: 2.85
-    L: 14.312444037247932
-    t: 42.0386
-    type: suction_anchor_22C
-    zlug: 9.541629358165288
-    mass: 50499.35343651291
+    D: 2.65
+    L: 13.248651417261277
+    t: 59.35
+    type: suction
+    zlug: 8.832434278174183
+    mass: 57399.336938108434
   suction_anchor_23A:
-    D: 2.85
-    L: 15.926641855649233
-    t: 43.9833
-    type: suction_anchor_23A
-    zlug: 10.617761237099488
-    mass: 68775.15186503755
+    D: 2.65
+    L: 15.829528456596611
+    t: 59.35
+    type: suction
+    zlug: 10.553018971064407
+    mass: 68149.04502000075
   suction_anchor_23B:
-    D: 2.85
-    L: 14.39989598386692
-    t: 42.2716
-    type: suction_anchor_23B
-    zlug: 9.59993065591128
-    mass: 51394.836651435646
+    D: 2.65
+    L: 13.373573309537548
+    t: 59.35
+    type: suction
+    zlug: 8.91574887302503
+    mass: 57919.86206965734
   suction_anchor_23C:
-    D: 2.85
-    L: 15.609961614607165
-    t: 39.156200000000005
-    type: suction_anchor_23C
-    zlug: 10.406641076404776
-    mass: 64890.89965242466
+    D: 2.65
+    L: 15.40141314904207
+    t: 59.35
+    type: suction
+    zlug: 10.267575432694713
+    mass: 66365.67758449118
   suction_anchor_24A:
-    D: 2.85
-    L: 15.952525989502211
-    t: 40.3394
-    type: suction_anchor_24A
-    zlug: 10.635017326334808
-    mass: 69099.30478912409
+    D: 2.65
+    L: 15.876637147783262
+    t: 59.35
+    type: suction
+    zlug: 10.584506145397174
+    mass: 68345.76764214167
   suction_anchor_24B:
-    D: 2.85
-    L: 14.388917718926152
-    t: 42.2245
-    type: suction_anchor_24B
-    zlug: 9.592611812617434
-    mass: 51281.84728023342
+    D: 2.65
+    L: 13.347150352838215
+    t: 59.35
+    type: suction
+    zlug: 8.898018855017142
+    mass: 57809.09012180784
   suction_anchor_24C:
-    D: 2.85
-    L: 15.615246581205138
-    t: 42.1327
-    type: suction_anchor_24C
-    zlug: 10.410164387470092
-    mass: 64954.49305767575
+    D: 2.65
+    L: 15.376682251110605
+    t: 59.35
+    type: suction
+    zlug: 10.251202880948735
+    mass: 66263.38668736057
   suction_anchor_25A:
-    D: 2.85
-    L: 15.92122462050501
-    t: 43.9368
-    type: suction_anchor_25A
-    zlug: 10.614149747003339
-    mass: 68707.43895265023
+    D: 2.65
+    L: 15.831450894994951
+    t: 59.35
+    type: suction
+    zlug: 10.5543005966633
+    mass: 68157.0522405202
   suction_anchor_25B:
-    D: 2.85
-    L: 14.491020966475677
-    t: 42.2706
-    type: suction_anchor_25B
-    zlug: 9.660680644317118
-    mass: 52339.110022395216
+    D: 2.65
+    L: 13.5033069190381
+    t: 59.35
+    type: suction
+    zlug: 9.002204612692065
+    mass: 58460.01215193173
   dandg_anchor_25C:
-    D: 1.176896921986783
-    L: 6.85481339631134
-    t: 32.349999999999994
-    type: dandg_anchor_25C
+    D: 1.1768969222348509
+    L: 6.854813394148907
+    t: 29.88793844469702
+    type: dandg
     zlug: 0
-    mass: 5787161.754601593
+    mass: 5787161.754963207
   suction_anchor_26A:
-    D: 2.85
-    L: 13.467422249234044
-    t: 40.2415
-    type: suction_anchor_26A
-    zlug: 8.978281499489363
-    mass: 42375.53967056357
+    D: 2.65
+    L: 11.804488535822774
+    t: 59.35
+    type: suction
+    zlug: 7.869659023881849
+    mass: 51384.19977288865
   suction_anchor_26B:
-    D: 2.85
-    L: 14.728020380262171
-    t: 45.707499999999996
-    type: suction_anchor_26B
-    zlug: 9.818680253508113
-    mass: 54848.9065906716
+    D: 3.25
+    L: 15.843599976774073
+    t: 71.35
+    type: suction
+    zlug: 10.562366651182714
+    mass: 101348.07152434597
   suction_anchor_26C:
-    D: 2.85
-    L: 15.642237402875772
-    t: 45.9472
-    type: suction_anchor_26C
-    zlug: 10.428158268583847
-    mass: 65279.91763168421
+    D: 2.65
+    L: 15.444906298585336
+    t: 59.35
+    type: suction
+    zlug: 10.296570865723556
+    mass: 66546.83253841824
   suction_anchor_27A:
-    D: 2.85
-    L: 13.579049795077744
-    t: 65.17309999999999
-    type: suction_anchor_27A
-    zlug: 9.052699863385161
-    mass: 43394.76144934583
+    D: 2.65
+    L: 15.302168342557168
+    t: 59.35
+    type: suction
+    zlug: 10.201412228371446
+    mass: 65952.30930615145
   suction_anchor_27B:
-    D: 2.85
-    L: 14.931561415657084
-    t: 75.0223
-    type: suction_anchor_27B
-    zlug: 9.954374277104723
-    mass: 57067.27186672737
+    D: 3.25
+    L: 16.34209091448587
+    t: 71.35
+    type: suction
+    zlug: 10.894727276323913
+    mass: 104411.00387220648
   suction_anchor_27C:
-    D: 2.85
-    L: 15.87402832447173
-    t: 41.9871
-    type: suction_anchor_27C
-    zlug: 10.58268554964782
-    mass: 68119.38404142598
+    D: 2.65
+    L: 15.740779561462048
+    t: 59.35
+    type: suction
+    zlug: 10.493886374308032
+    mass: 67779.60191389736
   suction_anchor_28A:
-    D: 2.85
-    L: 15.767960147080053
-    t: 46.9186
-    type: suction_anchor_28A
-    zlug: 10.511973431386702
-    mass: 66810.04456813482
+    D: 2.65
+    L: 15.529040153969506
+    t: 59.35
+    type: suction
+    zlug: 10.352774816188003
+    mass: 66897.97832219656
   suction_anchor_28B:
-    D: 2.85
-    L: 15.412458281470673
-    t: 46.1504
-    type: suction_anchor_28B
-    zlug: 10.274972187647116
-    mass: 62543.972386611946
+    D: 2.65
+    L: 15.046272684774076
+    t: 59.35
+    type: suction
+    zlug: 10.030815123182716
+    mass: 64886.46867187602
   dandg_anchor_28C:
-    D: 2.85
-    L: 15.70361366105934
-    t: 32.349999999999994
-    type: dandg_anchor_28C
-    zlug: 10.46907577403956
-    mass: 66023.95794257139
+    D: 2.65
+    L: 15.434634536927852
+    t: 59.35
+    type: suction
+    zlug: 10.289837738160234
+    mass: 66504.76593391865
   suction_anchor_29A:
-    D: 2.85
-    L: 15.66735470588875
-    t: 47.0134
-    type: suction_anchor_29A
-    zlug: 10.444903137259166
-    mass: 65583.72675503916
+    D: 2.65
+    L: 15.489919367344987
+    t: 59.35
+    type: suction
+    zlug: 10.326694291771657
+    mass: 66735.03486160617
   dandg_anchor_29B:
-    D: 2.85
-    L: 15.33740571348287
-    t: 32.349999999999994
-    type: dandg_anchor_29B
-    zlug: 10.224937142321913
-    mass: 61667.16187490264
+    D: 2.65
+    L: 14.93403759058433
+    t: 59.35
+    type: suction
+    zlug: 9.955991727056219
+    mass: 64418.99405735733
   suction_anchor_29C:
-    D: 2.85
-    L: 15.708572319221005
-    t: 46.7633
-    type: suction_anchor_29C
-    zlug: 10.472381546147336
-    mass: 66084.31612322284
+    D: 2.65
+    L: 15.443603183335538
+    t: 59.35
+    type: suction
+    zlug: 10.295816835765358
+    mass: 66542.12158058562
   suction_anchor_30A:
-    D: 2.85
-    L: 15.660678301856063
-    t: 43.6468
-    type: suction_anchor_30A
-    zlug: 10.440452201237374
-    mass: 65502.87992705068
+    D: 2.65
+    L: 15.463774261631562
+    t: 59.35
+    type: suction
+    zlug: 10.30926422129604
+    mass: 66626.13689788843
   suction_anchor_30B:
-    D: 2.85
-    L: 15.329627894035196
-    t: 43.0194
-    type: suction_anchor_30B
-    zlug: 10.219751929356796
-    mass: 61576.767268563875
-  suction_anchor_30C:
-    D: 1.176896921986783
-    L: 6.85481339631134
-    t: 51.226099999999995
-    type: suction_anchor_30C
-    zlug: 0
-    mass: 5787161.754601593
+    D: 2.65
+    L: 14.92099233751989
+    t: 59.35
+    type: suction
+    zlug: 9.947294891679926
+    mass: 64364.65878289059
   suction_anchor_31A:
-    D: 2.85
-    L: 15.767037555568916
-    t: 51.2965
-    type: suction_anchor_31A
-    zlug: 10.511358370379277
-    mass: 66798.73184347789
+    D: 2.65
+    L: 15.527487532721445
+    t: 59.35
+    type: suction
+    zlug: 10.351739735355963
+    mass: 66891.51144100695
   suction_anchor_31B:
-    D: 2.85
-    L: 15.315542949798747
-    t: 46.386700000000005
-    type: suction_anchor_31B
-    zlug: 10.210361966532497
-    mass: 61413.29426841115
+    D: 2.65
+    L: 14.897338981852611
+    t: 59.35
+    type: suction
+    zlug: 9.93152598790174
+    mass: 64266.13930106132
   suction_anchor_31C:
-    D: 2.85
-    L: 15.731382554405695
-    t: 50.8107
-    type: suction_anchor_31C
-    zlug: 10.487588369603795
-    mass: 66362.437391817
+    D: 2.65
+    L: 15.53840156178823
+    t: 59.35
+    type: suction
+    zlug: 10.35901575473382
+    mass: 66936.96987419733
   suction_anchor_32A:
-    D: 2.85
-    L: 15.719185441518102
-    t: 46.6768
-    type: suction_anchor_32A
-    zlug: 10.479456961012067
-    mass: 66213.6233677617
+    D: 2.65
+    L: 15.477701186246234
+    t: 59.35
+    type: suction
+    zlug: 10.318548837705823
+    mass: 66684.1444557087
   suction_anchor_32B:
-    D: 2.85
-    L: 15.392998107797931
-    t: 46.208
-    type: suction_anchor_32B
-    zlug: 10.261998738531954
-    mass: 62315.835696881644
+    D: 2.65
+    L: 14.999105333544353
+    t: 59.35
+    type: suction
+    zlug: 9.999370222362902
+    mass: 64690.0101622346
   suction_anchor_32C:
-    D: 2.85
-    L: 15.899611906710488
-    t: 50.2506
-    type: suction_anchor_32C
-    zlug: 10.599741271140324
-    mass: 68437.73101978611
+    D: 2.65
+    L: 15.877703186445961
+    t: 59.35
+    type: suction
+    zlug: 10.585216837838974
+    mass: 68350.20783989357
   suction_anchor_33A:
-    D: 2.85
-    L: 15.90840945170012
-    t: 46.1516
-    type: suction_anchor_33A
-    zlug: 10.605606301133413
-    mass: 68547.43203634235
+    D: 3.25
+    L: 13.739174372095695
+    t: 71.35
+    type: suction
+    zlug: 9.159530961605462
+    mass: 88419.97328613275
   suction_anchor_33B:
-    D: 2.85
-    L: 15.745880905706704
-    t: 42.6098
-    type: suction_anchor_33B
-    zlug: 10.497253937137803
-    mass: 66539.61769436325
+    D: 2.65
+    L: 15.385485728719118
+    t: 59.35
+    type: suction
+    zlug: 10.257071866021079
+    mass: 66300.05438324636
   suction_anchor_33C:
-    D: 2.85
-    L: 16.309488972176705
-    t: 72.28139999999999
-    type: suction_anchor_33C
-    zlug: 10.872992648117803
-    mass: 73673.89355521662
+    D: 3.25
+    L: 18.661656286674635
+    t: 71.35
+    type: suction
+    zlug: 12.441070857783089
+    mass: 118661.6262933962
   suction_anchor_34A:
-    D: 2.85
-    L: 16.39445560571172
-    t: 72.4258
-    type: suction_anchor_34A
-    zlug: 10.92963707047448
-    mass: 74791.68342637361
+    D: 3.25
+    L: 18.890207729768314
+    t: 71.35
+    type: suction
+    zlug: 12.593553200053876
+    mass: 120066.85622525204
   suction_anchor_34B:
-    D: 2.85
-    L: 16.067324704819168
-    t: 72.15639999999999
-    type: suction_anchor_34B
-    zlug: 10.711549803212778
-    mass: 70549.2158541816
+    D: 3.25
+    L: 18.166856357290623
+    t: 71.35
+    type: suction
+    zlug: 12.111204238193746
+    mass: 115621.67792649698
   suction_anchor_34C:
-    D: 2.85
-    L: 16.47862131578223
-    t: 65.1927
-    type: suction_anchor_34C
-    zlug: 10.98574754385482
-    mass: 75910.01088363145
+    D: 3.25
+    L: 19.128285563650493
+    t: 71.35
+    type: suction
+    zlug: 12.752190375766995
+    mass: 121528.80719149094
   suction_anchor_35A:
-    D: 2.85
-    L: 15.786772885439133
-    t: 50.7048
-    type: suction_anchor_35A
-    zlug: 10.524515256959422
-    mass: 67041.04325479054
+    D: 2.65
+    L: 15.646930872812455
+    t: 59.35
+    type: suction
+    zlug: 10.431287248541636
+    mass: 67388.50095214229
   suction_anchor_35B:
-    D: 2.85
-    L: 16.08838008368522
-    t: 71.9703
-    type: suction_anchor_35B
-    zlug: 10.725586722456812
-    mass: 70817.32596006758
+    D: 3.25
+    L: 18.212189363124565
+    t: 71.35
+    type: suction
+    zlug: 12.141459575416377
+    mass: 115900.50172229182
   suction_anchor_35C:
-    D: 2.85
-    L: 16.46041346063784
-    t: 71.3547
-    type: suction_anchor_35C
-    zlug: 10.97360897375856
-    mass: 75667.1420079521
+    D: 3.25
+    L: 19.07129573028084
+    t: 71.35
+    type: suction
+    zlug: 12.714278533728894
+    mass: 121179.4234240963
   suction_anchor_36A:
-    D: 2.85
-    L: 15.869587274170778
-    t: 50.7601
-    type: suction_anchor_36A
-    zlug: 10.579724849447185
-    mass: 68064.22270745301
+    D: 2.65
+    L: 15.793647763511437
+    t: 59.35
+    type: suction
+    zlug: 10.529131842340957
+    mass: 67999.80525182617
   suction_anchor_36B:
-    D: 2.85
-    L: 15.98419567548862
-    t: 66.216
-    type: suction_anchor_36B
-    zlug: 10.656130450325746
-    mass: 69497.29131116412
+    D: 3.25
+    L: 17.962545582981583
+    t: 71.35
+    type: suction
+    zlug: 11.975030388654389
+    mass: 114366.74200107077
   suction_anchor_36C:
-    D: 2.85
-    L: 16.469751307542982
-    t: 65.23519999999999
-    type: suction_anchor_36C
-    zlug: 10.979834205028654
-    mass: 75791.6318235173
+    D: 3.25
+    L: 19.08190668267674
+    t: 71.35
+    type: suction
+    zlug: 12.721352501992826
+    mass: 121244.61491967169
   suction_anchor_37A:
-    D: 2.85
-    L: 15.888884203596424
-    t: 43.974
-    type: suction_anchor_37A
-    zlug: 10.592589469064283
-    mass: 68304.12203027462
+    D: 2.65
+    L: 15.788094649028249
+    t: 59.35
+    type: suction
+    zlug: 10.525363099352166
+    mass: 67976.25925195031
   suction_anchor_37B:
-    D: 2.85
-    L: 14.49985624345279
-    t: 42.113
-    type: suction_anchor_37B
-    zlug: 9.666570828968526
-    mass: 52431.273377367375
+    D: 2.65
+    L: 13.415906737564134
+    t: 59.35
+    type: suction
+    zlug: 8.943937825042756
+    mass: 58095.97836697021
   suction_anchor_37C:
-    D: 1.0651033688122502
-    L: 6.237299443010168
-    t: 39.207100000000004
-    type: suction_anchor_37C
+    D: 1.1768969222348509
+    L: 6.854813394148907
+    t: 29.88793844469702
+    type: dandg
     zlug: 0
-    mass: 4406554.295832101
+    mass: 4406554.295543477
   suction_anchor_38A:
-    D: 2.85
-    L: 16.192327315470152
-    t: 71.84840000000001
-    type: suction_anchor_38A
-    zlug: 10.7948848769801
-    mass: 72150.88437142981
+    D: 3.25
+    L: 14.04941565467459
+    t: 71.35
+    type: suction
+    zlug: 9.366310436449726
+    mass: 90325.58873653405
   suction_anchor_38B:
-    D: 2.85
-    L: 14.905193630895345
-    t: 42.1067
-    type: suction_anchor_38B
-    zlug: 9.93679575393023
-    mass: 56776.585957998046
+    D: 3.25
+    L: 16.251390728136805
+    t: 71.35
+    type: suction
+    zlug: 10.834341865632869
+    mass: 103854.51067249048
   suction_anchor_38C:
-    D: 2.85
-    L: 14.190697865568055
-    t: 45.9318
-    type: suction_anchor_38C
-    zlug: 9.460465243712036
-    mass: 49270.0842857465
+    D: 2.65
+    L: 13.023590776892933
+    t: 59.35
+    type: suction
+    zlug: 8.682475231470288
+    mass: 56462.436834924396
   suction_anchor_39A:
-    D: 2.85
-    L: 16.39445560571172
-    t: 37.282700000000006
-    type: suction_anchor_39A
-    zlug: 10.92963707047448
-    mass: 74791.68342637361
+    D: 3.25
+    L: 18.917538034906165
+    t: 71.35
+    type: suction
+    zlug: 12.61177340347911
+    mass: 120234.76796399077
   suction_anchor_39B:
-    D: 2.85
-    L: 14.258759935906617
-    t: 46.2377
-    type: suction_anchor_39B
-    zlug: 9.505839957271078
-    mass: 49954.82056101814
+    D: 2.65
+    L: 13.132015930889784
+    t: 59.35
+    type: suction
+    zlug: 8.754677287259856
+    mass: 56913.53408451492
   suction_anchor_39C:
-    D: 2.85
-    L: 14.87360064200255
-    t: 45.9261
-    type: suction_anchor_39C
-    zlug: 9.915733761335034
-    mass: 56429.59818892096
+    D: 3.25
+    L: 16.26623021235305
+    t: 71.35
+    type: suction
+    zlug: 10.844234855110367
+    mass: 103945.6813924721
   suction_anchor_40A:
-    D: 2.85
-    L: 15.96073201223569
-    t: 40.1678
-    type: suction_anchor_40A
-    zlug: 10.640488008157126
-    mass: 69202.28262128444
+    D: 3.25
+    L: 13.756998413321641
+    t: 71.35
+    type: suction
+    zlug: 9.171413655756094
+    mass: 88529.48050672557
   suction_anchor_40B:
-    D: 2.85
-    L: 14.343435925927135
-    t: 46.1665
-    type: suction_anchor_40B
-    zlug: 9.562290617284756
-    mass: 50815.50398898875
+    D: 2.65
+    L: 13.298255440937108
+    t: 59.35
+    type: suction
+    zlug: 8.865503627291405
+    mass: 57605.94452385369
   suction_anchor_40C:
-    D: 2.85
-    L: 13.894223976666204
-    t: 46.1264
-    type: suction_anchor_40C
-    zlug: 9.262815984444135
-    mass: 46360.24259115572
+    D: 2.65
+    L: 12.571534107284617
+    t: 59.35
+    type: suction
+    zlug: 8.380989404856411
+    mass: 54578.84189169426
 cables: []
 dynamic_cable_configs: {}
 cable_types: {}
