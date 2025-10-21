@@ -242,10 +242,9 @@ mooring_line_types:
 
 anchor_types:
   DEA1:
-    A: 15
-    zlug: 20
     mass: 9159.0
     type: DEA
+    
 cables:
 - name: array_cable0
   endA:
