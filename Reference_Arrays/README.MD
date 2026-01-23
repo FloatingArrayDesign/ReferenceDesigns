@@ -6,12 +6,16 @@ The designs include platform layouts, cable routing, substation placement,
 mooring and cable designs, and anchor types developed for three U.S. 
 locations. The locations vary in water depths, ranging from deep water 
 (800 m) to intermediate (200 m) to to shallow (80 m), and metocean conditions,
-as described in [1]. 
+as described in [1]. The metocean conditions, including fatigue bins and extreme
+load conditions developed from the dataset, are provided in [2], 
+with methodology described in [1]. Bathymetry and sediment information for 
+each region is also provided in [2]. These 
+datasets can be found [here](https://data.nrel.gov/submissions/241).
 
-The floating wind turbines in the designs are the IEA Wind 15 MW turbine [2] 
-and VolturnUS-S semisubmersible platform [3]. Mooring system and dynamic
-power cable designs are incorporated from a previous recent publication [4].
-A substation design is included, adapted from the work of F. Jorge Alcantara [5].
+The floating wind turbines in the designs are the IEA Wind 15 MW turbine [3] 
+and VolturnUS-S semisubmersible platform [4]. Mooring system and dynamic
+power cable designs are incorporated from a previous recent publication [5].
+A substation design is included, adapted from the work of F. Jorge Alcantara [6].
 
 The array design process and design details will be described in an upcoming work.
 
@@ -50,14 +54,16 @@ lazy wave dynamic cables. There is a substation at the center of the array.
 
 ## References
 
-[1] [M. Biglu, M. Hall, E. Lozon, and S. Housner, “Reference Site Conditions for Floating Wind Arrays in the United States,” NREL/TP-5000-89897, 2024.](https://docs.nrel.gov/docs/fy24osti/89897.pdf)
+[1] [M. Biglu, M. Hall, E. Lozon, and S. Housner, ï¿½Reference Site Conditions for Floating Wind Arrays in the United States,ï¿½ NREL/TP-5000-89897, 2024.](https://docs.nrel.gov/docs/fy24osti/89897.pdf)
 
-[2] [E. Gaertner et al., “Definition of the IEA 15-Megawatt Offshore Reference Wind Turbine,” NREL/TP-5000-75698, 2020.](https://docs.nrel.gov/docs/fy20osti/75698.pdf)
+[2] [M. Biglu, M. Hall, E. Lozon, and S. Housner, "Reference Site Condition Datasets for Floating Wind Arrays in the United States." NREL Data Catalog. Golden, CO: National Renewable Energy Laboratory. 2024. Last updated: January 16, 2025. DOI: 10.7799/2425969](https://data.nrel.gov/submissions/241)
 
-[3] [C. Allen et al., “Definition of the UMaine VolturnUS-S Reference Platform Developed for the IEA Wind 15-Megawatt Offshore Reference Wind Turbine,” NREL/TP-5000-76773, 2020.](https://docs.nrel.gov/docs/fy20osti/76773.pdf)
+[3] [E. Gaertner et al., ï¿½Definition of the IEA 15-Megawatt Offshore Reference Wind Turbine,ï¿½ NREL/TP-5000-75698, 2020.](https://docs.nrel.gov/docs/fy20osti/75698.pdf)
 
-[4] [E. Lozon, M. Lekkala, L. Sirkis, and M. Hall, "Reference mooring and dynamic cable designs for representative U.S. floating wind farms", Ocean Engineering, 2025](https://doi.org/10.1016/j.oceaneng.2025.120473)
+[4] [C. Allen et al., ï¿½Definition of the UMaine VolturnUS-S Reference Platform Developed for the IEA Wind 15-Megawatt Offshore Reference Wind Turbine,ï¿½ NREL/TP-5000-76773, 2020.](https://docs.nrel.gov/docs/fy20osti/76773.pdf)
 
-[5] F. Jorge Alcantara, Design of a Floating Foundation for an HVAC Off-
+[5] [E. Lozon, M. Lekkala, L. Sirkis, and M. Hall, "Reference mooring and dynamic cable designs for representative U.S. floating wind farms", Ocean Engineering, 2025](https://doi.org/10.1016/j.oceaneng.2025.120473)
+
+[6] F. Jorge Alcantara, Design of a Floating Foundation for an HVAC Off-
 shore Substation, Ph.D. thesis, Universite de Liege, Belgium.
 

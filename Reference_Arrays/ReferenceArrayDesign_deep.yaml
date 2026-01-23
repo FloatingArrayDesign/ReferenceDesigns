@@ -105,79 +105,79 @@ array:
   - [fowt64, 1, 2, ms0, 1837.73064249652, 14504.4080205159, 0.0, 3.12752487]
   - [fowt65, 1, 2, ms0, 14782.1994565517, 2731.40112028401, 0.0, 3.12752487]
   - [fowt66, 1, 2, ms0, 14266.4684629399, 14842.4032988212, 0.0, 63.12752487000001]
-  - [substation, 0, 1, ms1, 7569.41671816, 8065.96616829, 0.0, 3.12752487]
+  - [substation, 0, 1, ms1, 7569.41671816, 8065.96616829, 0.0, 3.12752487]           # substation
 
 mooring_systems:
-  ms0:
+  ms0: # fowt mooring system
     keys: [MooringConfigID, heading, anchorType]
     data:
-    - ['0', 0.0, suction1]
-    - ['0', 120.0, suction1]
-    - ['0', 240.0, suction1]
-  ms1:
+    - [taut_0, 0.0, suction1]
+    - [taut_0, 120.0, suction1]
+    - [taut_0, 240.0, suction1]
+  ms1: # substation mooring system
     keys: [MooringConfigID, heading, anchorType]
     data:
-    - ['0', 125.0, suction1]
-    - ['0', 115.0, suction1]
-    - ['0', 5.0, suction1]
-    - ['0', 355.0, suction1]
-    - ['0', 245.0, suction1]
-    - ['0', 235.0, suction1]
+    - [taut_0, 125.0, suction1]
+    - [taut_0, 115.0, suction1]
+    - [taut_0, 5.0, suction1]
+    - [taut_0, 355.0, suction1]
+    - [taut_0, 245.0, suction1]
+    - [taut_0, 235.0, suction1]
 
 mooring_line_configs:
-  '0':
-    name: '0'
-    span: 1342.0
-    sections:
-    - type: 0
-      length: 80.0
-    - type: 1
+  taut_0:
+    name: taut_0
+    span: 1342.0         # horizontal distance from fairlead to anchor [m]
+    sections:            # mooring line sections in order from anchor to fairlead
+    - type: chain_0
+      length: 80.0       # length of this section [m]
+    - type: polyester_1
       length: 1378.9
-    - type: 0
+    - type: chain_0
       length: 80.0
 
 mooring_line_types:
-  0:
-    d_nom: 0.12
-    d_vol: 0.216
-    m: 288.0
-    EA: 1232000000.0
-    MBL: 13600000.0
-    cost: 1195
+  chain_0:
+    d_nom: 0.12          # nominal diameter [m]
+    d_vol: 0.216         # volume-equivalent diameter [m]
+    m: 288.0             # mass per unit length [kg/m]
+    EA: 1232000000.0     # axial stiffness [N]
+    MBL: 13600000.0      # minimum breaking load [N]
+    cost: 744.48         # cost per unit length [$/m]
     material: chain
     material details: R3 studless
-    name: 0
-    w: 2456.820077481978
-  1:
+    name: chain_0
+    w: 2456.820077481978 # weight per unit length [N/m]
+  polyester_1:
     d_nom: 0.184
     d_vol: 0.1456
     m: 23.0
     EA: 145000000.0
     MBL: 10400000.0
-    EAd: '2.049e8'
+    EAd: 2.049e8
     EAd_Lm: 0.125
-    cost: 451
+    cost: 239.2
     material: polyester
-    name: 1
+    name: polyester_1
     w: 58.210706810878335
 
 anchor_types:
   suction1:
-    type: Suction
+    type: Suction   # suction pile anchor
     m: 72005
 
 cables:
 - name: array_cable0
   endA:
-    attachID: fowt15
+    attachID: fowt15        # ID of platform attached at end A
     heading: 50.174927829999824
-    dynamicID: dynamic_0
+    dynamicID: dynamic_0    # dynamic cable configuration ID for end A
   endB:
     attachID: fowt4
     heading: 210.00000000000034
     dynamicID: dynamic_0
-  type: static_cable_66
-  routing_x_y_r:
+  type: static_cable_66_630 # static cable type ID
+  routing_x_y_r:            # static cable routing coordinates
   - [5682.533504772896, 6388.91232896721]
 - name: array_cable1
   endA:
@@ -188,7 +188,7 @@ cables:
     attachID: fowt15
     heading: 150.00000000000034
     dynamicID: dynamic_1
-  type: static_cable_66
+  type: static_cable_66_300
 - name: array_cable2
   endA:
     attachID: fowt36
@@ -198,7 +198,7 @@ cables:
     attachID: fowt15
     heading: 210.00000000000034
     dynamicID: dynamic_1
-  type: static_cable_66
+  type: static_cable_66_300
   routing_x_y_r:
   - [4201.436842052809, 5285.035524742242]
 - name: array_cable3
@@ -210,7 +210,7 @@ cables:
     attachID: fowt36
     heading: 150.0000000000004
     dynamicID: dynamic_1
-  type: static_cable_66
+  type: static_cable_66_300
 - name: array_cable4
   endA:
     attachID: fowt62
@@ -220,7 +220,7 @@ cables:
     attachID: fowt36
     heading: 210.00000000000028
     dynamicID: dynamic_1
-  type: static_cable_66
+  type: static_cable_66_300
   routing_x_y_r:
   - [2720.3401793327125, 4181.1587205172555]
 - name: array_cable5
@@ -232,7 +232,7 @@ cables:
     attachID: fowt62
     heading: 150.00000000000034
     dynamicID: dynamic_1
-  type: static_cable_66
+  type: static_cable_66_300
 - name: array_cable6
   endA:
     attachID: fowt4
@@ -242,7 +242,7 @@ cables:
     attachID: substation
     heading: 261.87247513
     dynamicID: dynamic_0
-  type: static_cable_66
+  type: static_cable_66_630
 - name: array_cable7
   endA:
     attachID: fowt9
@@ -252,7 +252,7 @@ cables:
     attachID: fowt0
     heading: 50.17492782999931
     dynamicID: dynamic_0
-  type: static_cable_66
+  type: static_cable_66_630
   routing_x_y_r:
   - [10041.605974017519, 9878.272075073768]
 - name: array_cable8
@@ -264,7 +264,7 @@ cables:
     attachID: fowt9
     heading: 150.00000000000048
     dynamicID: dynamic_0
-  type: static_cable_66
+  type: static_cable_66_630
 - name: array_cable9
   endA:
     attachID: fowt31
@@ -274,7 +274,7 @@ cables:
     attachID: fowt13
     heading: -29.99999999999997
     dynamicID: dynamic_0
-  type: static_cable_66
+  type: static_cable_66_630
   routing_x_y_r:
   - [11645.82816309987, 9589.843702423766]
 - name: array_cable10
@@ -286,7 +286,7 @@ cables:
     attachID: fowt31
     heading: -89.99999999999999
     dynamicID: dynamic_1
-  type: static_cable_66
+  type: static_cable_66_300
 - name: array_cable11
   endA:
     attachID: fowt42
@@ -296,7 +296,7 @@ cables:
     attachID: fowt31
     heading: 87.46837421999925
     dynamicID: dynamic_1
-  type: static_cable_66
+  type: static_cable_66_300
 - name: array_cable12
   endA:
     attachID: fowt57
@@ -306,7 +306,7 @@ cables:
     attachID: fowt31
     heading: -29.99999999999997
     dynamicID: dynamic_1
-  type: static_cable_66
+  type: static_cable_66_300
   routing_x_y_r:
   - [13126.924825820006, 10693.720506648786]
 - name: array_cable13
@@ -318,7 +318,7 @@ cables:
     attachID: fowt57
     heading: -89.99999999999999
     dynamicID: dynamic_1
-  type: static_cable_66
+  type: static_cable_66_300
 - name: array_cable14
   endA:
     attachID: fowt66
@@ -328,7 +328,7 @@ cables:
     attachID: fowt44
     heading: 30.000000000000327
     dynamicID: dynamic_1
-  type: static_cable_66
+  type: static_cable_66_300
 - name: array_cable15
   endA:
     attachID: fowt0
@@ -338,7 +338,7 @@ cables:
     attachID: substation
     heading: 86.87247513
     dynamicID: dynamic_2
-  type: static_cable_66
+  type: static_cable_66_1000
 - name: array_cable16
   endA:
     attachID: fowt7
@@ -348,7 +348,7 @@ cables:
     attachID: fowt1
     heading: 87.46837421999996
     dynamicID: dynamic_0
-  type: static_cable_66
+  type: static_cable_66_630
 - name: array_cable17
   endA:
     attachID: fowt20
@@ -358,7 +358,7 @@ cables:
     attachID: fowt7
     heading: 150.00000000000043
     dynamicID: dynamic_0
-  type: static_cable_66
+  type: static_cable_66_630
 - name: array_cable18
   endA:
     attachID: fowt38
@@ -368,7 +368,7 @@ cables:
     attachID: fowt20
     heading: 87.46837422000112
     dynamicID: dynamic_0
-  type: static_cable_66
+  type: static_cable_66_630
 - name: array_cable19
   endA:
     attachID: fowt58
@@ -378,7 +378,7 @@ cables:
     attachID: fowt38
     heading: 150.00000000000043
     dynamicID: dynamic_1
-  type: static_cable_66
+  type: static_cable_66_300
 - name: array_cable20
   endA:
     attachID: fowt53
@@ -388,7 +388,7 @@ cables:
     attachID: fowt38
     heading: 210.00000000000028
     dynamicID: dynamic_1
-  type: static_cable_66
+  type: static_cable_66_300
   routing_x_y_r:
   - [9997.356442791293, 2464.5766955565623]
 - name: array_cable21
@@ -400,7 +400,7 @@ cables:
     attachID: fowt53
     heading: -32.531625780000034
     dynamicID: dynamic_1
-  type: static_cable_66
+  type: static_cable_66_300
 - name: array_cable22
   endA:
     attachID: fowt40
@@ -410,7 +410,7 @@ cables:
     attachID: fowt58
     heading: -29.999999999999986
     dynamicID: dynamic_1
-  type: static_cable_66
+  type: static_cable_66_300
   routing_x_y_r:
   - [11517.361112958097, 2353.87765633826]
 - name: array_cable23
@@ -422,7 +422,7 @@ cables:
     attachID: fowt40
     heading: 87.46837422000307
     dynamicID: dynamic_1
-  type: static_cable_66
+  type: static_cable_66_300
 - name: array_cable24
   endA:
     attachID: fowt1
@@ -432,7 +432,7 @@ cables:
     attachID: substation
     heading: 96.87247512999997
     dynamicID: dynamic_2
-  type: static_cable_66
+  type: static_cable_66_1000
 - name: array_cable25
   endA:
     attachID: fowt8
@@ -442,7 +442,7 @@ cables:
     attachID: fowt3
     heading: 87.46837422000235
     dynamicID: dynamic_2
-  type: static_cable_66
+  type: static_cable_66_1000
 - name: array_cable26
   endA:
     attachID: fowt12
@@ -452,7 +452,7 @@ cables:
     attachID: fowt8
     heading: 150.00000000000043
     dynamicID: dynamic_0
-  type: static_cable_66
+  type: static_cable_66_630
 - name: array_cable27
   endA:
     attachID: fowt22
@@ -462,7 +462,7 @@ cables:
     attachID: fowt12
     heading: 87.4683742199995
     dynamicID: dynamic_1
-  type: static_cable_66
+  type: static_cable_66_300
 - name: array_cable28
   endA:
     attachID: fowt30
@@ -472,7 +472,7 @@ cables:
     attachID: fowt12
     heading: -30.00000000000003
     dynamicID: dynamic_0
-  type: static_cable_66
+  type: static_cable_66_630
   routing_x_y_r:
   - [11581.594638028992, 5971.860679381033]
 - name: array_cable29
@@ -484,7 +484,7 @@ cables:
     attachID: fowt30
     heading: 87.46837421999925
     dynamicID: dynamic_1
-  type: static_cable_66
+  type: static_cable_66_300
 - name: array_cable30
   endA:
     attachID: fowt54
@@ -494,7 +494,7 @@ cables:
     attachID: fowt41
     heading: 150.00000000000043
     dynamicID: dynamic_1
-  type: static_cable_66
+  type: static_cable_66_300
 - name: array_cable31
   endA:
     attachID: fowt65
@@ -504,7 +504,7 @@ cables:
     attachID: fowt54
     heading: 87.46837422000281
     dynamicID: dynamic_1
-  type: static_cable_66
+  type: static_cable_66_300
 - name: array_cable32
   endA:
     attachID: fowt23
@@ -514,7 +514,7 @@ cables:
     attachID: fowt30
     heading: -90.00000000000004
     dynamicID: dynamic_1
-  type: static_cable_66
+  type: static_cable_66_300
 - name: array_cable33
   endA:
     attachID: fowt55
@@ -524,7 +524,7 @@ cables:
     attachID: fowt30
     heading: -30.00000000000003
     dynamicID: dynamic_1
-  type: static_cable_66
+  type: static_cable_66_300
   routing_x_y_r:
   - [13062.691300749097, 7075.73748360601]
 - name: array_cable34
@@ -536,7 +536,7 @@ cables:
     attachID: substation
     heading: 91.87247513000001
     dynamicID: dynamic_2
-  type: static_cable_66
+  type: static_cable_66_1000
 - name: array_cable35
   endA:
     attachID: fowt25
@@ -546,7 +546,7 @@ cables:
     attachID: fowt14
     heading: -32.53162578000036
     dynamicID: dynamic_1
-  type: static_cable_66
+  type: static_cable_66_300
 - name: array_cable36
   endA:
     attachID: fowt32
@@ -556,7 +556,7 @@ cables:
     attachID: fowt25
     heading: -89.99999999999991
     dynamicID: dynamic_1
-  type: static_cable_66
+  type: static_cable_66_300
 - name: array_cable37
   endA:
     attachID: fowt45
@@ -566,7 +566,7 @@ cables:
     attachID: fowt25
     heading: 170.17492783000037
     dynamicID: dynamic_1
-  type: static_cable_66
+  type: static_cable_66_300
   routing_x_y_r:
   - [2971.9327558368486, 10024.819589727855]
 - name: array_cable38
@@ -578,7 +578,7 @@ cables:
     attachID: fowt45
     heading: -89.99999999999991
     dynamicID: dynamic_1
-  type: static_cable_66
+  type: static_cable_66_300
 - name: array_cable39
   endA:
     attachID: fowt14
@@ -588,7 +588,7 @@ cables:
     attachID: substation
     heading: -88.12752487
     dynamicID: dynamic_1
-  type: static_cable_66
+  type: static_cable_66_300
 - name: array_cable40
   endA:
     attachID: fowt10
@@ -598,7 +598,7 @@ cables:
     attachID: fowt2
     heading: -89.99999999999999
     dynamicID: dynamic_0
-  type: static_cable_66
+  type: static_cable_66_630
 - name: array_cable41
   endA:
     attachID: fowt21
@@ -608,7 +608,7 @@ cables:
     attachID: fowt10
     heading: -32.531625779998045
     dynamicID: dynamic_0
-  type: static_cable_66
+  type: static_cable_66_630
 - name: array_cable42
   endA:
     attachID: fowt39
@@ -618,7 +618,7 @@ cables:
     attachID: fowt21
     heading: -89.99999999999999
     dynamicID: dynamic_1
-  type: static_cable_66
+  type: static_cable_66_300
 - name: array_cable43
   endA:
     attachID: fowt61
@@ -628,7 +628,7 @@ cables:
     attachID: fowt39
     heading: -32.53162578000028
     dynamicID: dynamic_1
-  type: static_cable_66
+  type: static_cable_66_300
 - name: array_cable44
   endA:
     attachID: fowt37
@@ -638,7 +638,7 @@ cables:
     attachID: fowt21
     heading: -29.99999999999997
     dynamicID: dynamic_1
-  type: static_cable_66
+  type: static_cable_66_300
   routing_x_y_r:
   - [5849.908562361481, 12410.302531609494]
 - name: array_cable45
@@ -650,7 +650,7 @@ cables:
     attachID: fowt37
     heading: -89.99999999999999
     dynamicID: dynamic_1
-  type: static_cable_66
+  type: static_cable_66_300
 - name: array_cable46
   endA:
     attachID: fowt43
@@ -660,7 +660,7 @@ cables:
     attachID: fowt61
     heading: 170.17492782999935
     dynamicID: dynamic_1
-  type: static_cable_66
+  type: static_cable_66_300
   routing_x_y_r:
   - [3036.166280907804, 13642.802612770656]
 - name: array_cable47
@@ -672,7 +672,7 @@ cables:
     attachID: fowt43
     heading: -89.99999999999991
     dynamicID: dynamic_1
-  type: static_cable_66
+  type: static_cable_66_300
 - name: array_cable48
   endA:
     attachID: fowt2
@@ -682,7 +682,7 @@ cables:
     attachID: substation
     heading: -83.12752487000003
     dynamicID: dynamic_2
-  type: static_cable_66
+  type: static_cable_66_1000
 - name: array_cable49
   endA:
     attachID: fowt19
@@ -692,7 +692,7 @@ cables:
     attachID: fowt6
     heading: -89.99999999999999
     dynamicID: dynamic_1
-  type: static_cable_66
+  type: static_cable_66_300
 - name: array_cable50
   endA:
     attachID: fowt17
@@ -702,7 +702,7 @@ cables:
     attachID: fowt6
     heading: -29.99999999999997
     dynamicID: dynamic_0
-  type: static_cable_66
+  type: static_cable_66_630
   routing_x_y_r:
   - [8747.868362730711, 11000.073117016565]
 - name: array_cable51
@@ -714,7 +714,7 @@ cables:
     attachID: fowt17
     heading: -89.99999999999999
     dynamicID: dynamic_1
-  type: static_cable_66
+  type: static_cable_66_300
 - name: array_cable52
   endA:
     attachID: fowt52
@@ -724,7 +724,7 @@ cables:
     attachID: fowt33
     heading: -32.531625780000084
     dynamicID: dynamic_1
-  type: static_cable_66
+  type: static_cable_66_300
 - name: array_cable53
   endA:
     attachID: fowt50
@@ -734,7 +734,7 @@ cables:
     attachID: fowt33
     heading: 50.17492782999931
     dynamicID: dynamic_1
-  type: static_cable_66
+  type: static_cable_66_300
   routing_x_y_r:
   - [10105.839499088494, 13496.255098116522]
 - name: array_cable54
@@ -746,7 +746,7 @@ cables:
     attachID: fowt50
     heading: 150.00000000000048
     dynamicID: dynamic_1
-  type: static_cable_66
+  type: static_cable_66_300
 - name: array_cable55
   endA:
     attachID: fowt48
@@ -756,7 +756,7 @@ cables:
     attachID: fowt28
     heading: -29.99999999999997
     dynamicID: dynamic_1
-  type: static_cable_66
+  type: static_cable_66_300
   routing_x_y_r:
   - [11710.061688170897, 13207.82672546658]
 - name: array_cable56
@@ -768,7 +768,7 @@ cables:
     attachID: substation
     heading: 81.87247513
     dynamicID: dynamic_0
-  type: static_cable_66
+  type: static_cable_66_630
 - name: array_cable57
   endA:
     attachID: fowt18
@@ -778,7 +778,7 @@ cables:
     attachID: fowt5
     heading: 87.46837422000006
     dynamicID: dynamic_1
-  type: static_cable_66
+  type: static_cable_66_300
 - name: array_cable58
   endA:
     attachID: fowt29
@@ -788,7 +788,7 @@ cables:
     attachID: fowt18
     heading: 210.00000000000034
     dynamicID: dynamic_1
-  type: static_cable_66
+  type: static_cable_66_300
   routing_x_y_r:
   - [7099.396642422057, 3874.8061101493927]
 - name: array_cable59
@@ -800,7 +800,7 @@ cables:
     attachID: fowt29
     heading: 150.00000000000034
     dynamicID: dynamic_1
-  type: static_cable_66
+  type: static_cable_66_300
 - name: array_cable60
   endA:
     attachID: fowt49
@@ -810,7 +810,7 @@ cables:
     attachID: fowt29
     heading: 210.00000000000037
     dynamicID: dynamic_1
-  type: static_cable_66
+  type: static_cable_66_300
   routing_x_y_r:
   - [5618.299979701977, 2770.9293059244314]
 - name: array_cable61
@@ -822,7 +822,7 @@ cables:
     attachID: substation
     heading: 256.87247513
     dynamicID: dynamic_1
-  type: static_cable_66
+  type: static_cable_66_300
 - name: array_cable62
   endA:
     attachID: fowt26
@@ -832,7 +832,7 @@ cables:
     attachID: fowt11
     heading: 170.17492783000017
     dynamicID: dynamic_1
-  type: static_cable_66
+  type: static_cable_66_300
   routing_x_y_r:
   - [4388.795893486047, 7510.713370910097]
 - name: array_cable63
@@ -844,7 +844,7 @@ cables:
     attachID: fowt26
     heading: -90.00000000000004
     dynamicID: dynamic_1
-  type: static_cable_66
+  type: static_cable_66_300
 - name: array_cable64
   endA:
     attachID: fowt46
@@ -854,7 +854,7 @@ cables:
     attachID: fowt26
     heading: 170.17492782999994
     dynamicID: dynamic_1
-  type: static_cable_66
+  type: static_cable_66_300
   routing_x_y_r:
   - [2907.699230765956, 6406.836566685115]
 - name: array_cable65
@@ -866,7 +866,7 @@ cables:
     attachID: fowt46
     heading: -90.00000000000004
     dynamicID: dynamic_1
-  type: static_cable_66
+  type: static_cable_66_300
 - name: array_cable66
   endA:
     attachID: fowt11
@@ -876,71 +876,161 @@ cables:
     attachID: substation
     heading: -93.12752487
     dynamicID: dynamic_1
-  type: static_cable_66
+  type: static_cable_66_300
 
 dynamic_cable_configs:
   dynamic_0:
-    cable_type: dynamic_cable_66
-    A: 630.0
-    span: 500
-    length: 1070.43
-    voltage: 66.0
-    sections:
-    - L_mid: 497.981
+    cable_type: dynamic_cable_66_630
+    A: 630.0               # cable conductor size [mm^2]
+    span: 500              # horizontal distance from JTube to joint [m]
+    length: 1070.43        # total cable length [m]
+    voltage: 66.0          # cable voltage rating [kV]
+    sections:              # cable appendages sections in order from end A to end B
+    - type: cable_conn_0   # cable connection at JTube
+    - L_mid: 497.981       # buoyancy section
       N_modules: 60
       spacing: 6.76
-      V: 0.566
       type: buoy_0
-    - type: joint_0
-    rJTube: 5
+    - type: joint_0        # cable joint at seabed between dynamic and static cable
+    rJTube: 5              # radial distance from center of platform to JTube [m]
   dynamic_1:
-    cable_type: dynamic_cable_66
+    cable_type: dynamic_cable_66_300
     A: 300.0
     span: 500
     length: 1070.43
     voltage: 66.0
     sections:
+    - type: cable_conn_1
     - L_mid: 497.981
       N_modules: 34
       spacing: 12.07
-      V: 0.566
       type: buoy_0
     - type: joint_0
     rJTube: 5
   dynamic_2:
-    cable_type: dynamic_cable_66
+    cable_type: dynamic_cable_66_1000
     A: 1000.0
     span: 500
     length: 1070.43
     voltage: 66.0
     sections:
+    - type: cable_conn_2
     - L_mid: 497.981
       N_modules: 89.44
       spacing: 4.52
-      V: 0.566
       type: buoy_0
     - type: joint_0
     rJTube: 5
 
+cable_types:
+    dynamic_cable_66_300:
+        m: 36.66419531336287      # mass per unit length (kg/m)
+        EA: 469622033.24936056    # axial stiffness (N)
+        EI: 19916.10897643939     # bending stiffness (Nm^2)
+        w: 155.82772548702889     # weight per unit length (N/m)
+        MBL: 383237.99297699344   # maximum breaking load (N)
+        MBR: 2.4099228634059946   # maximum bending radius (m)
+        A: 300.0                  # conductor cross-sectional area (mm^2)
+        power: 84694364.82376207  # rated power capacity (W)
+        resistance: 0.08          # resistance (ohm/km)
+        voltage: 66.0             # voltage rating (kV)
+        cost: 492.66999999999996  # cost ($/m)
+        d_vol: 0.1606615242270663 # volumetric-equivalent diameter (m)
+    dynamic_cable_66_630:
+        m: 55.76032503534361
+        EA: 658013418.058403
+        EI: 42465.860390790636
+        w: 279.6370013719994
+        MBL: 537453.5244977144
+        MBR: 2.759991035821002
+        A: 630.0
+        power: 125031558.62299062
+        resistance: 0.0380952380952381
+        voltage: 66.0
+        cost: 751.555
+        d_vol: 0.1839994023880668
+    dynamic_cable_66_1000:
+        m: 75.7440231734922
+        EA: 854377279.9884987
+        EI: 68729.18743088475
+        w: 415.78113966445324
+        MBL: 698460.434218842
+        MBR: 3.0535249470757706
+        A: 1000.0
+        power: 159355059.41830036
+        resistance: 0.024
+        voltage: 66.0
+        cost: 1041.82
+        d_vol: 0.20356832980505138
+    static_cable_66_300:
+        d: 0.15396152422706633
+        m: 30.184309210840546
+        EA: 286833696.25348383
+        EI: 7679.657270398245
+        w: 108.90750709541506
+        MBL: 183724.16055912877
+        MBR: 2.309422863405995
+        A: 300
+        power: 84694364.82376207
+        resistance: 0.08
+        voltage: 66.0
+        cost: 455.27
+    static_cable_66_630:
+        d: 0.1772994023880668
+        m: 45.32999798354779
+        EA: 417238593.86007315
+        EI: 17596.455171628895
+        w: 196.432684103527
+        MBL: 260460.0959348103
+        MBR: 2.6594910358210018
+        A: 630
+        power: 125031558.62299062
+        resistance: 0.0380952380952381
+        voltage: 66.0
+        cost: 692.54
+    static_cable_66_1000:
+        d: 0.19686832980505137
+        m: 60.876113832386956
+        EA: 551017280.6846389
+        EI: 29589.363667426773
+        w: 291.11501842638484
+        MBL: 342477.98651723727
+        MBR: 2.9530249470757703
+        A: 1000
+        power: 159355059.41830036
+        resistance: 0.024
+        voltage: 66.0
+        cost: 958.5699999999999
+
 cable_appendages:
   buoy_0:
-    d: 0.865
-    density: 500
-    l: 0.9
-    m: 270.7
-    w: -3026
-    volume: 0.566
-    cost: 13000
+    d: 1         # outer diameter [m]
+    density: 480 # density of buoy material [kg/m^3]
+    l: 1         # length of each buoy module [m]
+    m: 273.6     # mass of each buoy module [kg]
+    volume: 0.57 # volume of each buoy module [m^3]
+    w: -3047.48  # underwater weight of each buoy module [N]
+    cost: 7976.3 # cost of each buoy module [$]
     type: buoy
   joint_0:
     cost: 118500.0
-    m: 0.0
+    m: 0
     type: joint
+  cable_conn_0: # connector to platform (includes bend stiffeners)
+    cost: 136764.8 # half the cost of the 630mm^2 cable connector cost/cable (assume 2 connectors per cable)
+    type: cable_connector
+  cable_conn_1:
+    cost: 101748.5 # half the cost of the 300 mm^2cable connector cost/cable (assume 2 connectors per cable)
+    type: cable_connector
+  cable_conn_2:
+    cost: 176025.5 # half the cost of the 1000mm^2 cable connector cost/cable (assume 2 connectors per cable)
+    type: cable_connector
 
 platforms:
-  - rFair: 38.736
-    zFair: -14
+  - rFair: 38.736           # fairlead radius [m]
+    zFair: -14              # fairlead depth [m]
     type: Substation
+    # - - - RAFT platform definition - - - 
     potModMaster :   1      # [int] master switch for potMod variables; 0=keeps all member potMod vars the same, 1=turns all potMod vars to False (no HAMS), 2=turns all potMod vars to True (no strip)
     dlsMax       :  5.0     # maximum node splitting section amount for platform members; can't be 0
     pointInertias:
@@ -953,7 +1043,7 @@ platforms:
       
 
     - name      :  outer_column              # [-]    an identifier (no longer has to be number)       
-      type      :  2                         # [-]    
+      type      :  rigid                         # [-]    
       rA        :  [20.695, 20.695, -22]           # [m]    end A coordinates
       rB        :  [20.695, 20.695,  14.4]           # [m]    and B coordinates
       heading   :  [ 0, 90, 180, 270]           # [deg]  heading rotation of column about z axis (for repeated members)
@@ -976,7 +1066,7 @@ platforms:
 
       
     - name      :  pontoon                   # [-]    an identifier (no longer has to be number)       
-      type      :  2                         # [-]    
+      type      :  rigid                         # [-]    
       rA        :  [20.695  , 14.0, -17.8]         # [m]    end A coordinates
       rB        :  [20.695, -14.0, -17.8]         # [m]    and B coordinates
       heading   :  [ 0, 90, 180, 270]           # [deg]  heading rotation of column about z axis (for repeated members)
@@ -996,7 +1086,7 @@ platforms:
       rho_fill  :  0.0                    # [kg/m3]
 
     - name      :  topside                   # [-]    an identifier (no longer has to be number)       
-      type      :  2                         # [-]    
+      type      :  rigid                         # [-]    
       rA        :  [0, 0, 14.4]         # [m]    end A coordinates
       rB        :  [0,0, 31.05]         # [m]    and B coordinates
       heading   :  [ 0]           # [deg]  heading rotation of column about z axis (for repeated members)
@@ -1014,9 +1104,11 @@ platforms:
       rho_shell :  0                      # [kg/m3]
       l_fill    :  0.0                      # [m]
       rho_fill  :  000.0                    # [kg/m3]
-  - rFair: 58
-    zFair: -14
+
+  - rFair: 58               # fairlead radius [m]
+    zFair: -14              # fairlead depth [m]
     type: FOWT
+    # - - - RAFT platform definition - - -
     potModMaster :   1      # [int] master switch for potMod variables; 0=keeps all member potMod vars the same, 1=turns all potMod vars to False (no HAMS), 2=turns all potMod vars to True (no strip)
     dlsMax       :  5.0     # maximum node splitting section amount for platform members; can't be 0
     qtfPath      :  'IEA-15-240-RWT-UMaineSemi.12d'      # path to the qtf file for the platform
@@ -1032,7 +1124,7 @@ platforms:
     members:   # list all members here
       
     - name      :  center_column             # [-]    an identifier (no longer has to be number)       
-      type      :  2                         # [-]    
+      type      :  rigid                         # [-]    
       rA        :  [ 0, 0, -20]              # [m]    end A coordinates
       rB        :  [ 0, 0,  15]              # [m]    and B coordinates
       shape     :  circ                      # [-]    circular or rectangular
@@ -1054,7 +1146,7 @@ platforms:
 
       
     - name      :  outer_column              # [-]    an identifier (no longer has to be number)       
-      type      :  2                         # [-]    
+      type      :  rigid                         # [-]    
       rA        :  [51.75, 0, -20]           # [m]    end A coordinates
       rB        :  [51.75, 0,  15]           # [m]    and B coordinates
       heading   :  [ 90, 210, 330]            # [deg]  heading rotation of column about z axis (for repeated members)
@@ -1080,7 +1172,7 @@ platforms:
 
       
     - name      :  pontoon                   # [-]    an identifier (no longer has to be number)       
-      type      :  2                         # [-]    
+      type      :  rigid                         # [-]    
       rA        :  [  5  , 0, -16.5]         # [m]    end A coordinates
       rB        :  [ 45.5, 0, -16.5]         # [m]    and B coordinates
       heading   :  [ 90, 210, 330]            # [deg]  heading rotation of column about z axis (for repeated members)
@@ -1101,7 +1193,7 @@ platforms:
       
       
     - name      :  upper_support             # [-]    an identifier (no longer has to be number)       
-      type      :  2                         # [-]    
+      type      :  rigid                         # [-]    
       rA        :  [  5  , 0, 14.545]        # [m]    end A coordinates
       rB        :  [ 45.5, 0, 14.545]        # [m]    and B coordinates
       heading   :  [ 90, 210, 330]          # [deg]  heading rotation of column about z axis (for repeated members)
@@ -1120,6 +1212,7 @@ platforms:
 
 topsides: 
   - type: Turbine
+    # - - - RAFT Turbine definition - - - 
     mRNA : 991000                        #  [kg]       RNA mass 
     IxRNA: 0                            #  [kg-m2]    RNA moment of inertia about local x axis (assumed to be identical to rotor axis for now, as approx) [kg-m^2]
     IrRNA: 0                            #  [kg-m2]    RNA moment of inertia about local y or z axes [kg-m^2]
@@ -1130,8 +1223,8 @@ topsides:
     nBlades: 3                 # number of blades
     Zhub: 150.0                # hub height [m]
     Rhub: 3.97                 # hub radius [m]
-    precone: 4.0               # [deg]
-    shaft_tilt: 6.0            # [deg]
+    precone: -4.0               # [deg]
+    shaft_tilt: -6.0            # [deg]
     overhang: -12.0313          # [m]
     aeroMod: 1                 # 0 aerodynamics off; 1 aerodynamics on
 
@@ -2186,7 +2279,7 @@ topsides:
     tower:    # (could remove some entries that don't apply for the tower)
       dlsMax: 5.0                 # maximum node splitting section amount; can't be 0
       name: tower                                # [-]    an identifier (no longer has to be number)       
-      type: 1                                    # [-]    
+      type: rigid                                # [-]    
       rA: [0, 0, 15]                             # [m]    end A coordinates
       rB: [0, 0, 144.582]                        # [m]    and B coordinates
       shape: circ                                # [-]    circular or rectangular
